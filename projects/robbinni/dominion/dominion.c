@@ -665,7 +665,7 @@ int performAdventurerCardEffect(int currentPlayer, struct gameState *state)
     }
   }
 
-  while(temphandSize-1>=0) {
+  while(temphandSize-1 > 0) { // BUG: will not discard the first card from the temphand array.
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[temphandSize-1]; // discard all cards in play that have been drawn
     temphandSize = temphandSize - 1;
   }
@@ -681,7 +681,8 @@ int performSmithyCardEffect(int currentPlayer, int handPos, struct gameState *st
   }
 
   //discard card from hand
-  discardCard(handPos, currentPlayer, state, 0);
+  // BUG: The correct signature for this function is int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
+  discardCard(currentPlayer, handPos, state, 0);
   return 0;
 }
 
@@ -750,8 +751,8 @@ int performTributeCardEffect(int currentPlayer, int handPos, struct gameState *s
     if (tributeRevealedCards[i] == copper || tributeRevealedCards[i] == silver || tributeRevealedCards[i] == gold){//Treasure cards
       state->coins += 2;
     }
-
-    else if (tributeRevealedCards[i] == estate || tributeRevealedCards[i] == duchy || tributeRevealedCards[i] == province || tributeRevealedCards[i] == gardens || tributeRevealedCards[i] == great_hall){//Victory Card Found
+    // BUG: missing the victory card "garden"
+    else if (tributeRevealedCards[i] == estate || tributeRevealedCards[i] == duchy || tributeRevealedCards[i] == province || tributeRevealedCards[i] == great_hall){//Victory Card Found
       drawCard(currentPlayer, state);
       drawCard(currentPlayer, state);
     }
@@ -812,7 +813,8 @@ int performFeastCardEffect(int currentPlayer, int choice, int handPos, struct ga
   }
 
   //Reset Hand
-  for (i = 0; i <= state->handCount[currentPlayer]; i++){
+  // BUG: index starts at 1 not 0.
+  for (i = 1; i <= state->handCount[currentPlayer]; i++){
     state->hand[currentPlayer][i] = temphand[i];
     temphand[i] = -1;
   }
