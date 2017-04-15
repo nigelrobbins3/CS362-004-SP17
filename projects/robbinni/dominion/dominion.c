@@ -643,7 +643,8 @@ int getCost(int cardNumber)
   return -1;
 }
 
-int performAdventurerCardEffect(int currentPlayer, struct gameState *state) {
+int performAdventurerCardEffect(int currentPlayer, struct gameState *state)
+{
   int drawntreasureCount = 0;
   int cardDrawn;
   int temphand[MAX_HAND];
@@ -668,6 +669,19 @@ int performAdventurerCardEffect(int currentPlayer, struct gameState *state) {
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[temphandSize-1]; // discard all cards in play that have been drawn
     temphandSize = temphandSize - 1;
   }
+  return 0;
+}
+
+int performSmithyCardEffect(int currentPlayer, int handPos, struct gameState *state)
+{
+  //+3 Cards
+  int i = 0;
+  for (i = 0; i < 3; i++) {
+    drawCard(currentPlayer, state);
+  }
+
+  //discard card from hand
+  discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
 
@@ -836,16 +850,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 
     case smithy:
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
-
+      return performSmithyCardEffect(currentPlayer, handPos, state);
     case village:
       //+1 Card
       drawCard(currentPlayer, state);
