@@ -1,0 +1,7 @@
+Result for running unit tests:
+unittest1.c:
+Hurray!
+File 'dominion.c'
+Lines executed:0.54% of 557
+Creating 'dominion.c.gcov'
+
