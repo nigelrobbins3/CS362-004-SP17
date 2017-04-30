@@ -136,3 +136,15 @@ File 'dominion.c'
 Lines executed:28.37% of 557
 Creating 'dominion.c.gcov'
 
+unittest4.c:
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+File 'dominion.c'
+Lines executed:30.16% of 557
+Creating 'dominion.c.gcov'
+
