@@ -7,6 +7,7 @@
 #include"dominion_helpers.h"
 #include"rngs.h"
 #include<stdio.h>
+#include<stdlib.h>
 
 void assertTrue(int result, char* success, char* failure) {
   if (result) {
@@ -18,6 +19,7 @@ void assertTrue(int result, char* success, char* failure) {
   } else {
     printf("TEST FAILURE: ");
     printf(failure);
+    printf("\n");
   }
 }
 
@@ -40,7 +42,7 @@ void resetGame(struct gameState* state) {
 }
 
 void testGainCard() {
-  struct gameState state; // set pointer to null
+  struct gameState state;
   int returnValue;
   int player;
   

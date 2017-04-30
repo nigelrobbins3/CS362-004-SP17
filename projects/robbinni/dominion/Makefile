@@ -35,7 +35,7 @@ player: player.c interface.o
 
 tests: unittestresults.out
 
-unittestresults.out: unittest1.c unittest2.c dominion.o rngs.o
+unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c dominion.o rngs.o
 	echo "Result for running unit tests:" > unittestresults.out
 
 	echo "unittest1.c:" >> unittestresults.out
@@ -48,8 +48,13 @@ unittestresults.out: unittest1.c unittest2.c dominion.o rngs.o
 	unittest2 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 
+	echo "unittest3.c:" >> unittestresults.out
+	gcc -o unittest3 rngs.o dominion.o unittest3.c $(CFLAGS)
+	unittest3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
-	rm -f badTestDrawCard testDrawCard unittest1
+	rm -f badTestDrawCard testDrawCard unittest1 unittest2 unittest3 unittest4

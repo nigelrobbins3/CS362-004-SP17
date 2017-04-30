@@ -94,3 +94,45 @@ File 'dominion.c'
 Lines executed:26.21% of 557
 Creating 'dominion.c.gcov'
 
+unittest3.c:
+Game initialized
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Game initialized
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+File 'dominion.c'
+Lines executed:28.37% of 557
+Creating 'dominion.c.gcov'
+
