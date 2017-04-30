@@ -1,7 +1,33 @@
 Result for running unit tests:
 unittest1.c:
-Hurray!
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
 File 'dominion.c'
-Lines executed:0.54% of 557
+Lines executed:5.21% of 557
 Creating 'dominion.c.gcov'
 
