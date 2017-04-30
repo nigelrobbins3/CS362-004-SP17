@@ -8,8 +8,6 @@
 #include"rngs.h"
 #include<stdio.h>
 
-#define NOISY_TEST 1
-
 void assertTrue(int result, char* success, char* failure) {
   if (result) {
     if (success[0] == '\0') {
@@ -22,7 +20,7 @@ void assertTrue(int result, char* success, char* failure) {
     printf(failure);
   }
 }
-int main() {
+void testGetCost() {
   int cost;
 
   // curse
@@ -106,6 +104,9 @@ int main() {
   // treasure_map
   cost = getCost(treasure_map);
   assertTrue(cost == 4, "", "Expected treasure_map to cost 4\n");
+}
 
+int main() {
+  testGetCost();
   return 0;
 }

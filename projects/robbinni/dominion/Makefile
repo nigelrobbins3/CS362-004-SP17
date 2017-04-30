@@ -35,12 +35,17 @@ player: player.c interface.o
 
 tests: unittestresults.out
 
-unittestresults.out: unittest1.c dominion.o rngs.o
+unittestresults.out: unittest1.c unittest2.c dominion.o rngs.o
 	echo "Result for running unit tests:" > unittestresults.out
 
 	echo "unittest1.c:" >> unittestresults.out
 	gcc -o unittest1 rngs.o dominion.o unittest1.c $(CFLAGS)
 	unittest1 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+
+	echo "unittest2.c:" >> unittestresults.out
+	gcc -o unittest2 rngs.o dominion.o unittest2.c $(CFLAGS)
+	unittest2 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
