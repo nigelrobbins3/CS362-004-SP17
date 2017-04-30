@@ -8,18 +8,6 @@
 #include"rngs.h"
 #include<stdio.h>
 
-void assertTrue(int result, char* success, char* failure) {
-  if (result) {
-    if (success[0] == '\0') {
-      printf("Success\n");
-    } else {
-      printf(success);
-    }
-  } else {
-    printf("TEST FAILURE: ");
-    printf(failure);
-  }
-}
 void testGetCost() {
   int cost;
 

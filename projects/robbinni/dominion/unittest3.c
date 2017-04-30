@@ -9,20 +9,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void assertTrue(int result, char* success, char* failure) {
-  if (result) {
-    if (success[0] == '\0') {
-      printf("Success\n");
-    } else {
-      printf(success);
-    }
-  } else {
-    printf("TEST FAILURE: ");
-    printf(failure);
-    printf("\n");
-  }
-}
-
 void resetGame(struct gameState* state) {
   // Eventually this method may be a good place for some random testing
   int numPlayers = 2;
