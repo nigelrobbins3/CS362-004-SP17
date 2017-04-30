@@ -41,22 +41,22 @@ unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c dominion.o 
 	echo "unittest1.c:" >> unittestresults.out
 	gcc -o unittest1 rngs.o dominion.o unittest1.c $(CFLAGS)
 	unittest1 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b -f dominion.c >> unittestresults.out
 
 	echo "unittest2.c:" >> unittestresults.out
 	gcc -o unittest2 rngs.o dominion.o unittest2.c $(CFLAGS)
 	unittest2 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b -f dominion.c >> unittestresults.out
 
 	echo "unittest3.c:" >> unittestresults.out
 	gcc -o unittest3 rngs.o dominion.o unittest3.c $(CFLAGS)
 	unittest3 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b -f dominion.c >> unittestresults.out
 
 	echo "unittest4.c:" >> unittestresults.out
 	gcc -o unittest4 rngs.o dominion.o unittest4.c $(CFLAGS)
 	unittest4 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b -f dominion.c >> unittestresults.out
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
