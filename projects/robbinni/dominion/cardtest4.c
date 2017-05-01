@@ -109,7 +109,7 @@ void testTribute() {
     state->discardCount[nextPlayer] = 0;
     state->coins = 0;
 
-    printf("Play tribute against opponent with 1 treasure card\n");
+    printf("\nPlay tribute against opponent with 1 treasure card\n");
     returnValue = performTributeCardEffect(player, 1, state);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
@@ -163,7 +163,7 @@ void testTribute() {
     state->deckCount[nextPlayer] = 0;
     state->coins = 0;
 
-    printf("Play tribute against opponent with 1 action card\n");
+    printf("\nPlay tribute against opponent with 1 action card\n");
     returnValue = performTributeCardEffect(player, 3, state);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
@@ -195,6 +195,8 @@ void testTribute() {
     // test other action cards. Only worry about actions: other failures should have been caught above
     int action;
     for (action = council_room; action <= treasure_map; action++) {
+      if (action == gardens || action == great_hall)
+        continue; // these cards are victory, not action.
       resetGame(state);
       giveEachPlayerFiveCardsInEachPile(state);
       state->hand[player][4] = tribute;
@@ -207,6 +209,259 @@ void testTribute() {
       assertTrue(returnValue == 0, "", "Expected tribute to return 0");
       assertTrue(state->numActions == 3, "", "Expected to receive 2 actions");
     }
+ 
+    // Test against opponent with 1 victory card in discard 
+    resetGame(state);
+    giveEachPlayerFiveCardsInEachPile(state);
+    state->hand[player][0] = tribute; // change position of tribute in each scenario
+    state->discardCount[nextPlayer] = 1;
+    state->discard[nextPlayer][0] = estate;
+    state->deckCount[nextPlayer] = 0;
+    state->coins = 0;
+
+    printf("\nPlay tribute against opponent with 1 victory card\n");
+    returnValue = performTributeCardEffect(player, 0, state);
+    assertTrue(returnValue == 0,
+               "", "Expected tribute to return 0");
+    assertTrue(state->handCount[player] == 6,
+               "", "Expected player handCount to be 6");
+    assertTrue(state->discardCount[player] == 6,
+               "", "Expected player discardCount to be 6");
+    assertTrue(state->deckCount[player] == 3,
+               "", "Expected player deckCount to be 3");
+    assertTrue(state->numActions == 1,
+               "", "Expected numActions to be 1");
+    assertTrue(state->coins == 0,
+               "", "Expected coins to not change");
+    // next player should have done nothing
+    assertTrue(state->handCount[nextPlayer] == 5,
+               "", "Expected next player handCount to be 5");
+    assertTrue(state->discardCount[nextPlayer] == 1,
+               "", "Expected next player discardCount to be 1");
+    assertTrue(state->deckCount[nextPlayer] == 0,
+               "", "Expected next player deckCount to be 0");
+    // previous player should have done nothing
+    assertTrue(state->handCount[prevPlayer] == 5,
+               "", "Expected previous player handCount to be 5");
+    assertTrue(state->discardCount[prevPlayer] == 5,
+               "", "Expected previous player discardCount to be 5");
+    assertTrue(state->deckCount[prevPlayer] == 5,
+               "", "Expected previous player deckCount to be 5");
+
+    // test other victory cards. Only worry about cards: other failures should have been caught above
+    int victory[5] = {estate, duchy, province, gardens, great_hall};
+    int victoryIndex;
+    for (victoryIndex = 1; victoryIndex<5; victoryIndex++) {
+      resetGame(state);
+      giveEachPlayerFiveCardsInEachPile(state);
+      state->hand[player][1] = tribute;
+      state->discardCount[nextPlayer] = 1;
+      state->discard[nextPlayer][0] = victory[victoryIndex];
+      state->deckCount[nextPlayer] = 0;
+      state->coins = 0;
+
+      returnValue = performTributeCardEffect(player, 1, state);
+      assertTrue(returnValue == 0, "", "Expected tribute to return 0");
+      assertTrue(state->handCount[player] == 6, "", "Expected to receive 2 cards");
+    }
+ 
+    // Test against opponent with 2 victory cards in discard 
+    resetGame(state);
+    giveEachPlayerFiveCardsInEachPile(state);
+    state->hand[player][0] = tribute;
+    state->discardCount[nextPlayer] = 2;
+    state->discard[nextPlayer][0] = estate;
+    state->discard[nextPlayer][1] = duchy;
+    state->deckCount[nextPlayer] = 0;
+    state->coins = 0;
+
+    printf("\nPlay tribute against opponent with 2 victory cards\n");
+    returnValue = performTributeCardEffect(player, 0, state);
+    assertTrue(returnValue == 0,
+               "", "Expected tribute to return 0");
+    assertTrue(state->handCount[player] == 8,
+               "", "Expected player handCount to be 8");
+    assertTrue(state->discardCount[player] == 6,
+               "", "Expected player discardCount to be 6");
+    assertTrue(state->deckCount[player] == 1,
+               "", "Expected player deckCount to be 1");
+    assertTrue(state->numActions == 1,
+               "", "Expected numActions to be 1");
+    assertTrue(state->coins == 0,
+               "", "Expected coins to not change");
+    // next player should have done nothing
+    assertTrue(state->handCount[nextPlayer] == 5,
+               "", "Expected next player handCount to be 5");
+    assertTrue(state->discardCount[nextPlayer] == 2,
+               "", "Expected next player discardCount to be 2");
+    assertTrue(state->deckCount[nextPlayer] == 0,
+               "", "Expected next player deckCount to be 0");
+    // previous player should have done nothing
+    assertTrue(state->handCount[prevPlayer] == 5,
+               "", "Expected previous player handCount to be 5");
+    assertTrue(state->discardCount[prevPlayer] == 5,
+               "", "Expected previous player discardCount to be 5");
+    assertTrue(state->deckCount[prevPlayer] == 5,
+               "", "Expected previous player deckCount to be 5");
+
+    // Test against opponent with 2 action cards in deck 
+    resetGame(state);
+    giveEachPlayerFiveCardsInEachPile(state);
+    state->hand[player][0] = tribute;
+    state->deckCount[nextPlayer] = 2;
+    state->deck[nextPlayer][0] = adventurer;
+    state->deck[nextPlayer][1] = council_room;
+    state->discardCount[nextPlayer] = 0;
+    state->coins = 0;
+
+    printf("\nPlay tribute against opponent with 2 action cards\n");
+    returnValue = performTributeCardEffect(player, 0, state);
+    assertTrue(returnValue == 0,
+               "", "Expected tribute to return 0");
+    assertTrue(state->handCount[player] == 4,
+               "", "Expected player handCount to be 4");
+    assertTrue(state->discardCount[player] == 6,
+               "", "Expected player discardCount to be 6");
+    assertTrue(state->deckCount[player] == 5,
+               "", "Expected player deckCount to be 5");
+    assertTrue(state->numActions == 5,
+               "", "Expected numActions to be 5");
+    assertTrue(state->coins == 0,
+               "", "Expected coins to not change");
+    // next player should have done nothing
+    assertTrue(state->handCount[nextPlayer] == 5,
+               "", "Expected next player handCount to be 5");
+    assertTrue(state->discardCount[nextPlayer] == 2,
+               "", "Expected next player discardCount to be 2");
+    assertTrue(state->deckCount[nextPlayer] == 0,
+               "", "Expected next player deckCount to be 0");
+    // previous player should have done nothing
+    assertTrue(state->handCount[prevPlayer] == 5,
+               "", "Expected previous player handCount to be 5");
+    assertTrue(state->discardCount[prevPlayer] == 5,
+               "", "Expected previous player discardCount to be 5");
+    assertTrue(state->deckCount[prevPlayer] == 5,
+               "", "Expected previous player deckCount to be 5");
+
+    // Test against opponent with 2 treasure cards deck and discard 
+    resetGame(state);
+    giveEachPlayerFiveCardsInEachPile(state);
+    state->hand[player][0] = tribute;
+    state->deckCount[nextPlayer] = 1;
+    state->deck[nextPlayer][0] = copper;
+    state->discard[nextPlayer][0] = silver;
+    state->discardCount[nextPlayer] = 1;
+    state->coins = 0;
+
+    printf("\nPlay tribute against opponent with 2 treasure cards\n");
+    returnValue = performTributeCardEffect(player, 0, state);
+    assertTrue(returnValue == 0,
+               "", "Expected tribute to return 0");
+    assertTrue(state->handCount[player] == 4,
+               "", "Expected player handCount to be 4");
+    assertTrue(state->discardCount[player] == 6,
+               "", "Expected player discardCount to be 6");
+    assertTrue(state->deckCount[player] == 5,
+               "", "Expected player deckCount to be 5");
+    assertTrue(state->numActions == 1,
+               "", "Expected numActions to be 1");
+    assertTrue(state->coins == 4,
+               "", "Expected to receive 4 coins");
+    // next player should have done nothing
+    assertTrue(state->handCount[nextPlayer] == 5,
+               "", "Expected next player handCount to be 5");
+    assertTrue(state->discardCount[nextPlayer] == 2,
+               "", "Expected next player discardCount to be 2");
+    assertTrue(state->deckCount[nextPlayer] == 0,
+               "", "Expected next player deckCount to be 0");
+    // previous player should have done nothing
+    assertTrue(state->handCount[prevPlayer] == 5,
+               "", "Expected previous player handCount to be 5");
+    assertTrue(state->discardCount[prevPlayer] == 5,
+               "", "Expected previous player discardCount to be 5");
+    assertTrue(state->deckCount[prevPlayer] == 5,
+               "", "Expected previous player deckCount to be 5");
+
+    // Test against opponent with 2 duplicate cards 
+    resetGame(state);
+    giveEachPlayerFiveCardsInEachPile(state);
+    state->hand[player][0] = tribute;
+    state->deckCount[nextPlayer] = 2;
+    state->deck[nextPlayer][0] = copper;
+    state->deck[nextPlayer][1] = copper;
+    state->discardCount[nextPlayer] = 0;
+    state->coins = 0;
+
+    printf("\nPlay tribute against opponent with 2 duplicate cards\n");
+    returnValue = performTributeCardEffect(player, 0, state);
+    assertTrue(returnValue == 0,
+               "", "Expected tribute to return 0");
+    assertTrue(state->handCount[player] == 4,
+               "", "Expected player handCount to be 4");
+    assertTrue(state->discardCount[player] == 6,
+               "", "Expected player discardCount to be 6");
+    assertTrue(state->deckCount[player] == 5,
+               "", "Expected player deckCount to be 5");
+    assertTrue(state->numActions == 1,
+               "", "Expected numActions to be 1");
+    assertTrue(state->coins == 2,
+               "", "Expected to receive 2 coins");
+    // next player should have done nothing
+    assertTrue(state->handCount[nextPlayer] == 5,
+               "", "Expected next player handCount to be 5");
+    assertTrue(state->discardCount[nextPlayer] == 2,
+               "", "Expected next player discardCount to be 2");
+    assertTrue(state->deckCount[nextPlayer] == 0,
+               "", "Expected next player deckCount to be 0");
+    // previous player should have done nothing
+    assertTrue(state->handCount[prevPlayer] == 5,
+               "", "Expected previous player handCount to be 5");
+    assertTrue(state->discardCount[prevPlayer] == 5,
+               "", "Expected previous player discardCount to be 5");
+    assertTrue(state->deckCount[prevPlayer] == 5,
+               "", "Expected previous player deckCount to be 5");
+
+    // Test against opponent with 1 action and 1 treasure
+    resetGame(state);
+    giveEachPlayerFiveCardsInEachPile(state);
+    state->hand[player][0] = tribute;
+    state->deckCount[nextPlayer] = 2;
+    state->deck[nextPlayer][0] = copper;
+    state->deck[nextPlayer][1] = council_room;
+    state->discardCount[nextPlayer] = 0;
+    state->coins = 0;
+
+    printf("\nPlay tribute against opponent with 1 action and 1 treasure\n");
+    returnValue = performTributeCardEffect(player, 0, state);
+    assertTrue(returnValue == 0,
+               "", "Expected tribute to return 0");
+    assertTrue(state->handCount[player] == 4,
+               "", "Expected player handCount to be 4");
+    assertTrue(state->discardCount[player] == 6,
+               "", "Expected player discardCount to be 6");
+    assertTrue(state->deckCount[player] == 5,
+               "", "Expected player deckCount to be 5");
+    assertTrue(state->numActions == 3,
+               "", "Expected numActions to be 3");
+    assertTrue(state->coins == 2,
+               "", "Expected to receive 2 coins");
+    // next player should have done nothing
+    assertTrue(state->handCount[nextPlayer] == 5,
+               "", "Expected next player handCount to be 5");
+    assertTrue(state->discardCount[nextPlayer] == 2,
+               "", "Expected next player discardCount to be 2");
+    assertTrue(state->deckCount[nextPlayer] == 0,
+               "", "Expected next player deckCount to be 0");
+    // previous player should have done nothing
+    assertTrue(state->handCount[prevPlayer] == 5,
+               "", "Expected previous player handCount to be 5");
+    assertTrue(state->discardCount[prevPlayer] == 5,
+               "", "Expected previous player discardCount to be 5");
+    assertTrue(state->deckCount[prevPlayer] == 5,
+               "", "Expected previous player deckCount to be 5");
+
+
+
   }
 }
 
