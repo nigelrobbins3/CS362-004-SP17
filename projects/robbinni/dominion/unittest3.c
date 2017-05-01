@@ -1,6 +1,6 @@
 /* unittest2.c
  * Nigel Robbins
- * Test the gainCard function in dominion.c
+ * Test the discardCard function in dominion.c
  */
 
 #include"dominion.h"
@@ -72,7 +72,7 @@ void testCommonFunctionality(struct gameState* state, int trashFlag) {
              "", "Expected handCount to be 0 after discarding copper");
 }
 
-void testGainCard() {
+void testDiscardCard() {
   struct gameState* state = (struct gameState*)malloc(sizeof(struct gameState));
   if (!state) return;
   int trashFlag = 0; // first test cards without trashing
@@ -114,6 +114,6 @@ void testGainCard() {
 }
 
 int main() {
-  testGainCard();
+  testDiscardCard();
   return 0;
 }
