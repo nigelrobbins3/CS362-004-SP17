@@ -781,7 +781,58 @@ Calls executed:8.42% of 95
 Creating 'dominion.c.gcov'
 
 cardtest1.c:
-TEST FAILURE: failure
+**********
+Play adventurer with two copper on top of the deck
+Success
+TEST FAILURE: Expected player to have two cards in hand
+TEST FAILURE: Expected the player to have copper in position 0
+Success
+Success
+TEST FAILURE: Expected discard to have 1 card
+**********
+Play adventurer with a gold and silver on top of the deck
+Success
+TEST FAILURE: Expected player to have three cards in hand
+TEST FAILURE: Expected the player to have curse in position 0
+TEST FAILURE: Expected the player to have gold in position 1
+TEST FAILURE: Expected the player to have silver in position 2
+Success
+TEST FAILURE: Expected discard to have 1 card
+**********
+Play adventurer with 3 curses and 2 copper in the deck
+Success
+TEST FAILURE: Expected player to have three cards in hand
+Success
+TEST FAILURE: Expected the player to have copper in position 1
+Success
+Success
+TEST FAILURE: Expected discard to have 4 cards
+**********
+Play adventurer with only 1 copper in the deck and 1 in the discard
+Success
+TEST FAILURE: Expected player to have 4 cards in hand
+TEST FAILURE: Expected the player to have curse in position 0
+Success
+TEST FAILURE: Expected the player to have copper in position 2
+Success
+Success
+TEST FAILURE: Expected discard to have 5 cards
+**********
+Play adventurer with only 1 copper in the deck and 0 in the discard
+Success
+TEST FAILURE: Expected player to have 3 cards in hand
+Success
+Success
+TEST FAILURE: Expected the player to have copper in position 2
+Success
+TEST FAILURE: Expected discard to have 6 cards
+**********
+Play adventurer with no treasures
+Success
+TEST FAILURE: Expected player to have 2 cards in hand
+TEST FAILURE: Expected the player to have curse in position 0
+TEST FAILURE: Expected the player to have curse in position 1
+Success
 Success
 Function 'updateCoins'
 Lines executed:81.82% of 11
@@ -831,10 +882,10 @@ Taken at least once:0.00% of 2
 Calls executed:0.00% of 2
 
 Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:100.00% of 17
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -843,10 +894,10 @@ Taken at least once:96.43% of 28
 No calls
 
 Function 'drawCard'
-Lines executed:36.36% of 22
-Branches executed:33.33% of 6
-Taken at least once:16.67% of 6
-Calls executed:0.00% of 1
+Lines executed:100.00% of 22
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 1
 
 Function 'getWinners'
 Lines executed:0.00% of 24
@@ -911,9 +962,9 @@ Taken at least once:0.00% of 10
 Calls executed:0.00% of 3
 
 Function 'shuffle'
-Lines executed:93.75% of 16
+Lines executed:100.00% of 16
 Branches executed:100.00% of 8
-Taken at least once:87.50% of 8
+Taken at least once:100.00% of 8
 Calls executed:100.00% of 2
 
 Function 'initializeGame'
@@ -939,10 +990,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:30.16% of 557
-Branches executed:27.60% of 413
-Taken at least once:24.21% of 413
-Calls executed:8.42% of 95
+Lines executed:35.91% of 557
+Branches executed:31.48% of 413
+Taken at least once:28.57% of 413
+Calls executed:11.58% of 95
 Creating 'dominion.c.gcov'
 
 cardtest2.c:
@@ -994,10 +1045,10 @@ Taken at least once:0.00% of 2
 Calls executed:0.00% of 2
 
 Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:100.00% of 17
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -1006,10 +1057,10 @@ Taken at least once:96.43% of 28
 No calls
 
 Function 'drawCard'
-Lines executed:36.36% of 22
-Branches executed:33.33% of 6
-Taken at least once:16.67% of 6
-Calls executed:0.00% of 1
+Lines executed:100.00% of 22
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 1
 
 Function 'getWinners'
 Lines executed:0.00% of 24
@@ -1074,9 +1125,9 @@ Taken at least once:0.00% of 10
 Calls executed:0.00% of 3
 
 Function 'shuffle'
-Lines executed:93.75% of 16
+Lines executed:100.00% of 16
 Branches executed:100.00% of 8
-Taken at least once:87.50% of 8
+Taken at least once:100.00% of 8
 Calls executed:100.00% of 2
 
 Function 'initializeGame'
@@ -1102,10 +1153,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:30.16% of 557
-Branches executed:27.60% of 413
-Taken at least once:24.21% of 413
-Calls executed:8.42% of 95
+Lines executed:35.91% of 557
+Branches executed:31.48% of 413
+Taken at least once:28.57% of 413
+Calls executed:11.58% of 95
 Creating 'dominion.c.gcov'
 
 cardtest3.c:
@@ -1157,10 +1208,10 @@ Taken at least once:0.00% of 2
 Calls executed:0.00% of 2
 
 Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:100.00% of 17
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -1169,10 +1220,10 @@ Taken at least once:96.43% of 28
 No calls
 
 Function 'drawCard'
-Lines executed:36.36% of 22
-Branches executed:33.33% of 6
-Taken at least once:16.67% of 6
-Calls executed:0.00% of 1
+Lines executed:100.00% of 22
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 1
 
 Function 'getWinners'
 Lines executed:0.00% of 24
@@ -1237,9 +1288,9 @@ Taken at least once:0.00% of 10
 Calls executed:0.00% of 3
 
 Function 'shuffle'
-Lines executed:93.75% of 16
+Lines executed:100.00% of 16
 Branches executed:100.00% of 8
-Taken at least once:87.50% of 8
+Taken at least once:100.00% of 8
 Calls executed:100.00% of 2
 
 Function 'initializeGame'
@@ -1265,10 +1316,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:30.16% of 557
-Branches executed:27.60% of 413
-Taken at least once:24.21% of 413
-Calls executed:8.42% of 95
+Lines executed:35.91% of 557
+Branches executed:31.48% of 413
+Taken at least once:28.57% of 413
+Calls executed:11.58% of 95
 Creating 'dominion.c.gcov'
 
 cardtest4.c:
@@ -1320,10 +1371,10 @@ Taken at least once:0.00% of 2
 Calls executed:0.00% of 2
 
 Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:100.00% of 17
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -1332,10 +1383,10 @@ Taken at least once:96.43% of 28
 No calls
 
 Function 'drawCard'
-Lines executed:36.36% of 22
-Branches executed:33.33% of 6
-Taken at least once:16.67% of 6
-Calls executed:0.00% of 1
+Lines executed:100.00% of 22
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 1
 
 Function 'getWinners'
 Lines executed:0.00% of 24
@@ -1400,9 +1451,9 @@ Taken at least once:0.00% of 10
 Calls executed:0.00% of 3
 
 Function 'shuffle'
-Lines executed:93.75% of 16
+Lines executed:100.00% of 16
 Branches executed:100.00% of 8
-Taken at least once:87.50% of 8
+Taken at least once:100.00% of 8
 Calls executed:100.00% of 2
 
 Function 'initializeGame'
@@ -1428,9 +1479,9 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:30.16% of 557
-Branches executed:27.60% of 413
-Taken at least once:24.21% of 413
-Calls executed:8.42% of 95
+Lines executed:35.91% of 557
+Branches executed:31.48% of 413
+Taken at least once:28.57% of 413
+Calls executed:11.58% of 95
 Creating 'dominion.c.gcov'
 
