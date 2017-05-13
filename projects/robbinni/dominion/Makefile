@@ -96,7 +96,7 @@ randomtestcard2.out: randomtestcard2.c assert_true.o dominion.o rngs.o
 	gcov -b -f dominion.c >> randomtestcard2.out
 
 randomtestadventurer.out: randomtestadventurer.c assert_true.o dominion.o rngs.o
-	echo "Result for random testing:" > randomtestrandomtestadventurer.out
+	echo "Result for random testing:" > randomtestadventurer.out
 
 	gcc -o randomtestadventurer rngs.o dominion.o assert_true.o randomtestadventurer.c $(CFLAGS)
 	randomtestadventurer >> randomtestadventurer.out

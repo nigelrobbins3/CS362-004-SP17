@@ -19,9 +19,8 @@ void clearGame(struct gameState* state) {
 
 int main() {
   struct gameState* state = (struct gameState*)malloc(sizeof(struct gameState));
-  int test, player, returnValue, handCount, deckCount, discardCount, handPos;
-
-  floor(1.4);
+  int test, player, returnValue, handCount, deckCount, discardCount, handPos,
+      playedCardCount;
   SelectStream(3);
   PutSeed(123);
 
@@ -32,20 +31,24 @@ int main() {
     handCount = floor(Random() * (MAX_HAND - 1)) + 1; // at least 1
     deckCount = floor(Random() * MAX_DECK);
     discardCount = floor(Random() * MAX_DECK);
+    playedCardCount = floor(Random() * MAX_DECK);
     // BUG: large values of handPos cause a segfault after drawing three cards.
     // Use small values so that test suite completes until bug is resolved.
     handPos = floor(Random() * MAX_PLAYERS);
     state->handCount[player] = handCount;
     state->deckCount[player] = deckCount;
     state->discardCount[player] = discardCount;
+    state->playedCardCount = playedCardCount;
 
     // run code under test
     returnValue = performSmithyCardEffect(player, handPos, state);
     assertTrue(returnValue == 0, "", "Expected return value to be 0");
     assertTrue(state->handCount[player] == handCount + 2,
                 "", "Expected player to have net gain of 2 cards");
-    assertTrue(state->discardCount[player] = discardCount + 1,
-                "", "Expected player to have discarded 1 card");
+    assertTrue(state->playedCardCount,
+                "", "Expected player to have played a card");
+    assertTrue(state->discardCount[player] == discardCount,
+                "", "Expected player to not have discarded a card");
     assertTrue(state->deckCount[player] == deckCount - 3,
                 "", "Expected player to have drawn 3 cards");
   }
