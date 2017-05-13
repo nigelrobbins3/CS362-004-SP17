@@ -3,16 +3,19 @@ Testing Smithy with random testing
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -21,8 +24,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -31,7 +36,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -43,36 +51,43 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -81,92 +96,112 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -178,26 +213,31 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -206,77 +246,94 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 Success
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -288,31 +345,37 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -324,6 +387,7 @@ Success
 Success
 Success
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -341,27 +405,37 @@ Success
 Success
 Success
 Success
+Success
+Success
+Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -376,32 +450,40 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -416,7 +498,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -431,7 +516,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -443,6 +531,7 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -451,22 +540,28 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -478,101 +573,121 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 Success
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -581,7 +696,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -593,6 +711,7 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -601,12 +720,16 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -618,20 +741,26 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
+Success
 Success
 Success
 Success
@@ -651,12 +780,16 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -671,8 +804,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -681,7 +816,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -693,51 +831,61 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -746,7 +894,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -761,32 +912,40 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -806,8 +965,11 @@ Success
 Success
 Success
 Success
+Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -816,8 +978,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -826,47 +990,58 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -886,8 +1061,11 @@ Success
 Success
 Success
 Success
+Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -896,7 +1074,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -911,32 +1092,40 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -948,16 +1137,19 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -966,18 +1158,22 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -986,7 +1182,10 @@ Success
 Success
 Success
 Success
+Success
 TEST FAILURE: Expected player to have net gain of 2 cards
+Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Success
@@ -998,6 +1197,7 @@ Success
 Success
 TEST FAILURE: Expected player to have net gain of 2 cards
 Success
+TEST FAILURE: Expected player to have played 1 smithy
 Success
 Success
 Function 'updateCoins'

@@ -40,17 +40,22 @@ int main() {
     state->discardCount[player] = discardCount;
     state->playedCardCount = playedCardCount;
 
+    // put smithy at handPos
+    state->hand[player][handPos] = smithy;
+
     // run code under test
     returnValue = performSmithyCardEffect(player, handPos, state);
     assertTrue(returnValue == 0, "", "Expected return value to be 0");
     assertTrue(state->handCount[player] == handCount + 2,
-                "", "Expected player to have net gain of 2 cards");
-    assertTrue(state->playedCardCount,
-                "", "Expected player to have played a card");
+               "", "Expected player to have net gain of 2 cards");
+    assertTrue(state->playedCardCount == playedCardCount + 1,
+               "", "Expected player to have played a card");
+    assertTrue(state->playedCards[playedCardCount] == smithy,
+               "", "Expected player to have played 1 smithy");
     assertTrue(state->discardCount[player] == discardCount,
-                "", "Expected player to not have discarded a card");
+               "", "Expected player to not have discarded a card");
     assertTrue(state->deckCount[player] == deckCount - 3,
-                "", "Expected player to have drawn 3 cards");
+               "", "Expected player to have drawn 3 cards");
   }
 
   free(state);
