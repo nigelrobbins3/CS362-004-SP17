@@ -11,7 +11,7 @@
 #include <math.h>
 #include <string.h> // for memset
 
-#define SMITHY_TEST_COUNT 20
+#define SMITHY_TEST_COUNT 200
 
 void clearGame(struct gameState* state) {
   memset(state, -1, sizeof(struct gameState));
