@@ -69,14 +69,15 @@ int main(int argc, char* argv[]) {
     // put the adventurer at handPos
     state->hand[player][handPos] = adventurer;
 
-    // BUG: without at least 2 tresaure cards in the deck, discard, and hand
+    // BUG: without at least 3 tresaure cards in the deck, discard, and hand
     // (yes, the hand) there is a seg fault
-    if (discardCount < 2) {
+    if (discardCount < 3) {
       break; // not enough cards
     } else {
       // HACK: to fix/hide this, add a couple treasures to the bottom of the discard
       state->discard[player][0] = copper;
       state->discard[player][1] = copper;
+      state->discard[player][2] = copper;
    }
 
     // run code under test
