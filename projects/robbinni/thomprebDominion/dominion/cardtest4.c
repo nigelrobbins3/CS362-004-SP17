@@ -66,13 +66,14 @@ void testTribute() {
     // Test against opponent with no cards
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute;
     state->deckCount[nextPlayer] = 0;
     state->discardCount[nextPlayer] = 0;
     state->coins = 0; // we get coins from our opening hand in resetGame
 
     printf("Play tribute against opponent with no cards\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -103,6 +104,7 @@ void testTribute() {
     // Test against opponent with 1 treasure card in deck 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][1] = tribute; // change position of tribute in each scenario
     state->deckCount[nextPlayer] = 1;
     state->deck[nextPlayer][0] = copper;
@@ -110,7 +112,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 1 treasure card\n");
-    returnValue = performTributeCardEffect(player, 1, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 1, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -143,13 +145,14 @@ void testTribute() {
     for (treasure = silver; treasure <= gold; treasure++) {
       resetGame(state);
       giveEachPlayerFiveCardsInEachPile(state);
+      state->whoseTurn = player;
       state->hand[player][2] = tribute;
       state->deckCount[nextPlayer] = 1;
       state->deck[nextPlayer][0] = treasure;
       state->discardCount[nextPlayer] = 0;
       state->coins = 0;
 
-      returnValue = performTributeCardEffect(player, 2, state);
+      returnValue = cardEffect(tribute, 0, 0, 0, state, 2, NULL);
       assertTrue(returnValue == 0, "", "Expected tribute to return 0");
       assertTrue(state->coins == 2, "", "Expected to receive 2 coins");
     }
@@ -157,6 +160,7 @@ void testTribute() {
     // Test against opponent with 1 action card in discard 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][3] = tribute; // change position of tribute in each scenario
     state->discardCount[nextPlayer] = 1;
     state->discard[nextPlayer][0] = adventurer;
@@ -164,7 +168,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 1 action card\n");
-    returnValue = performTributeCardEffect(player, 3, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 3, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -199,13 +203,14 @@ void testTribute() {
         continue; // these cards are victory, not action.
       resetGame(state);
       giveEachPlayerFiveCardsInEachPile(state);
+      state->whoseTurn = player;
       state->hand[player][4] = tribute;
       state->discardCount[nextPlayer] = 1;
       state->discard[nextPlayer][0] = action;
       state->deckCount[nextPlayer] = 0;
       state->coins = 0;
 
-      returnValue = performTributeCardEffect(player, 4, state);
+      returnValue = cardEffect(tribute, 0, 0, 0, state, 4, NULL);
       assertTrue(returnValue == 0, "", "Expected tribute to return 0");
       assertTrue(state->numActions == 3, "", "Expected to receive 2 actions");
     }
@@ -213,6 +218,7 @@ void testTribute() {
     // Test against opponent with 1 victory card in discard 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute; // change position of tribute in each scenario
     state->discardCount[nextPlayer] = 1;
     state->discard[nextPlayer][0] = estate;
@@ -220,7 +226,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 1 victory card\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 6,
@@ -254,13 +260,14 @@ void testTribute() {
     for (victoryIndex = 1; victoryIndex<5; victoryIndex++) {
       resetGame(state);
       giveEachPlayerFiveCardsInEachPile(state);
+      state->whoseTurn = player;
       state->hand[player][1] = tribute;
       state->discardCount[nextPlayer] = 1;
       state->discard[nextPlayer][0] = victory[victoryIndex];
       state->deckCount[nextPlayer] = 0;
       state->coins = 0;
 
-      returnValue = performTributeCardEffect(player, 1, state);
+      returnValue = cardEffect(tribute, 0, 0, 0, state, 1, NULL);
       assertTrue(returnValue == 0, "", "Expected tribute to return 0");
       assertTrue(state->handCount[player] == 6, "", "Expected to receive 2 cards");
     }
@@ -268,6 +275,7 @@ void testTribute() {
     // Test against opponent with 2 victory cards in discard 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute;
     state->discardCount[nextPlayer] = 2;
     state->discard[nextPlayer][0] = estate;
@@ -276,7 +284,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 2 victory cards\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 8,
@@ -307,6 +315,7 @@ void testTribute() {
     // Test against opponent with 2 action cards in deck 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute;
     state->deckCount[nextPlayer] = 2;
     state->deck[nextPlayer][0] = adventurer;
@@ -315,7 +324,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 2 action cards\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -346,6 +355,7 @@ void testTribute() {
     // Test against opponent with 2 treasure cards deck and discard 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute;
     state->deckCount[nextPlayer] = 1;
     state->deck[nextPlayer][0] = copper;
@@ -354,7 +364,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 2 treasure cards\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -385,6 +395,7 @@ void testTribute() {
     // Test against opponent with 2 duplicate cards 
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute;
     state->deckCount[nextPlayer] = 2;
     state->deck[nextPlayer][0] = copper;
@@ -393,7 +404,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 2 duplicate cards\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -424,6 +435,7 @@ void testTribute() {
     // Test against opponent with 1 action and 1 treasure
     resetGame(state);
     giveEachPlayerFiveCardsInEachPile(state);
+    state->whoseTurn = player;
     state->hand[player][0] = tribute;
     state->deckCount[nextPlayer] = 2;
     state->deck[nextPlayer][0] = copper;
@@ -432,7 +444,7 @@ void testTribute() {
     state->coins = 0;
 
     printf("\nPlay tribute against opponent with 1 action and 1 treasure\n");
-    returnValue = performTributeCardEffect(player, 0, state);
+    returnValue = cardEffect(tribute, 0, 0, 0, state, 0, NULL);
     assertTrue(returnValue == 0,
                "", "Expected tribute to return 0");
     assertTrue(state->handCount[player] == 4,
@@ -459,8 +471,6 @@ void testTribute() {
                "", "Expected previous player discardCount to be 5");
     assertTrue(state->deckCount[prevPlayer] == 5,
                "", "Expected previous player deckCount to be 5");
-
-
 
   }
 }

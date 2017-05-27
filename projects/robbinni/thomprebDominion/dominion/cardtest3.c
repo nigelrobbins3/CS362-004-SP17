@@ -40,11 +40,12 @@ void testVillage() {
     // Test that current player draws 1 card from their deck and gains 2 actions
     printf("Player %d plays village\n", player + 1);
     resetGame(state, cards);
+    state->whoseTurn = player;
     state->hand[player][0] = village;
     state->handCount[player] = 1;
     state->deckCount[player] = 5;
     state->discardCount[player] = 0;
-    returnValue = performVillageCardEffect(player, 0, state);
+    returnValue = cardEffect(village, 0, 0, 0, state, 0, NULL);
 
     assertTrue(returnValue == 0, "", "Expected village to return 0");
     assertTrue(state->handCount[player] == 1,

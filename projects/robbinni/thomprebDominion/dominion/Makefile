@@ -104,6 +104,8 @@ randomtestadventurer.out: randomtestadventurer.c assert_true.o dominion.o rngs.o
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
+alltests: tests randomtestcard1.out randomtestcard2.out randomtestadventurer.out
+
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
 	rm -f badTestDrawCard testDrawCard unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4

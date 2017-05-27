@@ -46,6 +46,7 @@ int main() {
     // test negative values in case a bug let a player play too many actions
     actionCount = floor(Random() * 10) - 5;
 
+    state->whoseTurn = player;
     state->handCount[player] = handCount;
     state->deckCount[player] = deckCount;
     state->discardCount[player] = discardCount;
@@ -73,7 +74,7 @@ int main() {
     }
 
     // run code under test
-    returnValue = performVillageCardEffect(player, handPos, state);
+    returnValue = cardEffect(village, 0, 0, 0, state, handPos, NULL); 
     assertTrue(returnValue == 0, "", "Expected return value to be 0");
     assertTrue(state->handCount[player] == drawFailed ? handCount - 1 : handCount,
                "", "Expected player to have net gain of 0 cards");

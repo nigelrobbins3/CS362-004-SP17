@@ -32,6 +32,7 @@ void testAdventurer() {
   if (!state) return;
   int returnValue;
   int player = 0;
+  int bonus = 0; // only to give cardEffect the right signature
 
   // Test that if the first two cards are copper, adventurer draws them and stops.
   printf("**********\n");
@@ -43,7 +44,7 @@ void testAdventurer() {
   state->deck[player][4] = copper;
   state->handCount[player] = 1;
   state->hand[player][0] = adventurer;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = cardEffect(adventurer, 0, 0, 0, state, 0, &bonus);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 2,
@@ -68,7 +69,7 @@ void testAdventurer() {
   state->handCount[player] = 2; // test different hand sizes in each scenario
   state->hand[player][0] = adventurer;
   state->hand[player][1] = curse; // an irrelevant card
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = cardEffect(adventurer, 0, 0, 0, state, 0, &bonus);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
@@ -98,7 +99,7 @@ void testAdventurer() {
   state->handCount[player] = 2; // test different hand sizes in each scenario
   state->hand[player][0] = curse;
   state->hand[player][1] = adventurer; // test different adventurer positions
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = cardEffect(adventurer, 0, 0, 0, state, 1, &bonus);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
@@ -130,7 +131,7 @@ void testAdventurer() {
   state->hand[player][0] = adventurer;
   state->hand[player][1] = curse;
   state->hand[player][2] = curse;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = cardEffect(adventurer, 0, 0, 0, state, 0, &bonus);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 4,
@@ -165,7 +166,7 @@ void testAdventurer() {
   state->hand[player][0] = curse;
   state->hand[player][1] = curse;
   state->hand[player][2] = adventurer;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = cardEffect(adventurer, 0, 0, 0, state, 2, &bonus);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
@@ -187,6 +188,7 @@ void testAdventurer() {
   printf("**********\n");
   printf("Play adventurer with no treasures\n");
   resetGame(state);
+  state->whoseTurn = player;
   state->discardCount[player] = 1;
   state->discard[player][0] = curse; // no treasure in deck + discard
   state->deckCount[player] = 5;
@@ -199,7 +201,7 @@ void testAdventurer() {
   state->hand[player][0] = copper; // NOTE: treasure is needed!!!
   state->hand[player][1] = adventurer;
   state->hand[player][2] = curse;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = cardEffect(adventurer, 0, 0, 0, state, 1, &bonus);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 2,

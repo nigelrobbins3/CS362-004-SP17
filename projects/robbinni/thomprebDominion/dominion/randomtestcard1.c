@@ -35,6 +35,7 @@ int main() {
     // BUG: large values of handPos cause a segfault after drawing three cards.
     // Use small values so that test suite completes until bug is resolved.
     handPos = floor(Random() * MAX_PLAYERS);
+    state->whoseTurn = player;
     state->handCount[player] = handCount;
     state->deckCount[player] = deckCount;
     state->discardCount[player] = discardCount;
@@ -44,7 +45,7 @@ int main() {
     state->hand[player][handPos] = smithy;
 
     // run code under test
-    returnValue = performSmithyCardEffect(player, handPos, state);
+    returnValue = cardEffect(smithy, 0, 0, 0, state, handPos, NULL); 
     assertTrue(returnValue == 0, "", "Expected return value to be 0");
     assertTrue(state->handCount[player] == handCount + 2,
                "", "Expected player to have net gain of 2 cards");

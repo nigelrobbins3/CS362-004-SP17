@@ -52,6 +52,7 @@ int main(int argc, char* argv[]) {
     discardCount = floor(Random() * deckSize);
     playedCardCount = floor(Random() * deckSize);
     handPos = floor(Random() * (handCount - 1));
+    state->whoseTurn = player;
     state->handCount[player] = handCount;
     state->deckCount[player] = deckCount;
     state->discardCount[player] = discardCount;
@@ -78,7 +79,7 @@ int main(int argc, char* argv[]) {
    }
 
     // run code under test
-    returnValue = performAdventurerCardEffect(player, state);
+    returnValue = cardEffect(adventurer, 0, 0, 0, state, handPos, NULL);
     deckLoss = deckCount - state->deckCount[player];
     discardGain = state->discardCount[player] - discardCount;
     firstDrawnCard = state->hand[player][handCount - 1];

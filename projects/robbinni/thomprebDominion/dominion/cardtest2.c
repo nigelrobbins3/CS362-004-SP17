@@ -40,11 +40,12 @@ void testSmithy() {
     // Test that current player draws 3 cards from their deck
     printf("Player %d plays smithy\n", player + 1);
     resetGame(state, cards);
+    state->whoseTurn = player;
     state->hand[player][0] = smithy;
     state->handCount[player] = 1;
     state->deckCount[player] = 5;
     state->discardCount[player] = 0;
-    returnValue = performSmithyCardEffect(player, 0, state);
+    returnValue = cardEffect(smithy, 0, 0, 0, state, 0, NULL);
 
     assertTrue(returnValue == 0, "", "Expected smithy to return 0");
     assertTrue(state->handCount[player] == 3,
