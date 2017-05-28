@@ -81,8 +81,8 @@ int main(int argc, char* argv[]) {
     returnValue = performAdventurerCardEffect(player, handPos, state);
     deckLoss = deckCount - state->deckCount[player];
     discardGain = state->discardCount[player] - discardCount;
-    firstDrawnCard = state->hand[player][handCount - 1];
-    secondDrawnCard = state->hand[player][handCount];
+    firstDrawnCard = state->hand[player][handCount];
+    secondDrawnCard = state->hand[player][handPos]; // will have been swapped with Adventurer
 
     assertTrue(returnValue == 0, "", "Expected return value to be 0");
     assertTrue(state->handCount[player] == handCount + 1,

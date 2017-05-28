@@ -4,67 +4,56 @@ Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
@@ -76,61 +65,51 @@ Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
@@ -142,43 +121,36 @@ Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
@@ -196,25 +168,21 @@ Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
@@ -232,13 +200,11 @@ Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
@@ -250,19 +216,53 @@ Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
 Success
 Success
 Success
 Success
 Success
-TEST FAILURE: Expected the first card to have been treasure
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
 Success
 Function 'updateCoins'
 Lines executed:0.00% of 11
@@ -277,9 +277,9 @@ Taken at least once:0.00% of 6
 Calls executed:0.00% of 1
 
 Function 'discardCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
+Lines executed:84.62% of 13
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
 No calls
 
 Function 'cardEffect'
@@ -301,21 +301,21 @@ Taken at least once:0.00% of 28
 Calls executed:0.00% of 3
 
 Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
+Lines executed:100.00% of 5
 No branches
-Calls executed:0.00% of 2
+Calls executed:100.00% of 2
 
 Function 'performSmithyCardEffect'
-Lines executed:0.00% of 6
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 2
+Lines executed:100.00% of 6
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 2
 
 Function 'performAdventurerCardEffect'
-Lines executed:100.00% of 17
+Lines executed:100.00% of 18
 Branches executed:100.00% of 12
 Taken at least once:100.00% of 12
-Calls executed:100.00% of 2
+Calls executed:100.00% of 3
 
 Function 'getCost'
 Lines executed:0.00% of 30
@@ -420,9 +420,9 @@ Taken at least once:100.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:10.77% of 557
-Branches executed:7.26% of 413
-Taken at least once:7.02% of 413
-Calls executed:5.26% of 95
+Lines executed:14.87% of 558
+Branches executed:9.20% of 413
+Taken at least once:8.23% of 413
+Calls executed:10.42% of 96
 Creating 'dominion.c.gcov'
 
