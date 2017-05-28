@@ -651,10 +651,10 @@ int performAdventurerCardEffect(int currentPlayer, int handPos, struct gameState
   int temphandSize = 0;
 
   while(drawntreasureCount < 2) {
-    if (state->deckCount[currentPlayer] < 1){ // If the deck is empty we need to shuffle discard and add to deck
-      shuffle(currentPlayer, state);
+    // draw a card. If it fails, there weren't enough treasures, so stop now.
+    if (drawCard(currentPlayer, state) == -1) {
+      break;
     }
-    drawCard(currentPlayer, state);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1]; // Top card of hand is most recently drawn card.
     if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
       drawntreasureCount++;

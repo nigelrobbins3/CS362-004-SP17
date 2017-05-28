@@ -829,11 +829,11 @@ Success
 **********
 Play adventurer with no treasures
 Success
-TEST FAILURE: Expected player to have 2 cards in hand
-TEST FAILURE: Expected the player to have curse in position 0
-TEST FAILURE: Expected the player to have curse in position 1
 Success
-TEST FAILURE: Expected discard to have 6 cards
+TEST FAILURE: Expected the player to have curse in position 0
+Success
+Success
+Success
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
