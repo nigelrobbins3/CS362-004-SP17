@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
     deckCount = floor(Random() * deckSize);
     discardCount = floor(Random() * deckSize);
     playedCardCount = floor(Random() * deckSize);
-    handPos = floor(Random() * (handCount - 1));
+    handPos = floor(Random() * handCount);
     state->handCount[player] = handCount;
     state->deckCount[player] = deckCount;
     state->discardCount[player] = discardCount;
@@ -67,16 +67,6 @@ int main(int argc, char* argv[]) {
     // put the adventurer at handPos
     state->hand[player][handPos] = adventurer;
 
-    // BUG: without at least 2 tresaure cards in the deck, discard, and hand
-    // (yes, the hand) there is a seg fault
-    if (discardCount < 2) {
-      break; // not enough cards
-    } else {
-      // HACK: to fix/hide this, add a couple treasures to the bottom of the discard
-      state->discard[player][0] = copper;
-      state->discard[player][1] = copper;
-   }
-
     // run code under test
     returnValue = performAdventurerCardEffect(player, handPos, state);
     deckLoss = deckCount - state->deckCount[player];
@@ -84,17 +74,42 @@ int main(int argc, char* argv[]) {
     firstDrawnCard = state->hand[player][handCount];
     secondDrawnCard = state->hand[player][handPos]; // will have been swapped with Adventurer
 
+    // test things that are always true
     assertTrue(returnValue == 0, "", "Expected return value to be 0");
-    assertTrue(state->handCount[player] == handCount + 1,
-               "", "Expected player to have net gain of 1 card");
-    assertTrue(discardGain == deckLoss - 2, // this is valid through shuffling
-               "", "Expected player to have discarded every drawn card except the two treasures");
     assertTrue(state->playedCardCount == playedCardCount + 1,
                "", "Expected played cards to have increased by 1");
-    assertTrue(firstDrawnCard == copper || firstDrawnCard == silver || firstDrawnCard == gold,
-               "", "Expected the first card to have been treasure");
-    assertTrue(secondDrawnCard == copper || secondDrawnCard == silver || secondDrawnCard == gold,
-               "", "Expected the second card to have been treasure");
+
+    // Depending on how many cards were drawn, different behavior is expected
+    switch(state->handCount[player] - handCount) {
+      case 1: {
+        // Typical case: 2 treasures drawn, Adventurer discarded for a net gain of 1
+        assertTrue(discardGain == deckLoss - 2, // this is valid through shuffling
+                   "", "Expected player to have discarded every drawn card except the two treasures");
+        assertTrue(firstDrawnCard == copper || firstDrawnCard == silver || firstDrawnCard == gold,
+                   "", "Expected the first card to have been treasure");
+        assertTrue(secondDrawnCard == copper || secondDrawnCard == silver || secondDrawnCard == gold,
+                   "", "Expected the second card to have been treasure");
+        break;
+      }
+      case 0: {
+        // Only 1 treasure drawn and Adventurer discarded for a net gain of 0
+        assertTrue(discardGain == deckLoss - 1,
+                   "", "Expected player to have discarded every drawn card except the treasure");
+        // the "second" card is the last card drawn and gets swapped with Adventurer
+        assertTrue(secondDrawnCard == copper || secondDrawnCard == silver || secondDrawnCard == gold,
+                   "", "Expected the drawn card to have been treasure");
+        break;
+      }
+      case -1: {
+        // No treasures drawn and Adventurer discarded for a net gain of -1
+        assertTrue(discardGain == deckLoss,
+                   "", "Expected player to have discarded every drawn card");
+        break;
+      }
+      default: {
+        assertTrue(0, "", "Expected the player to have drawn 0, 1, or 2 cards");
+      }
+    }
   }
 
   free(state);
