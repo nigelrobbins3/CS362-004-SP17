@@ -665,7 +665,7 @@ int performAdventurerCardEffect(int currentPlayer, struct gameState *state)
     }
   }
 
-  while(temphandSize-1 > 0) { // BUG: will not discard the first card from the temphand array.
+  while(temphandSize > 0) {
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[temphandSize-1]; // discard all cards in play that have been drawn
     temphandSize = temphandSize - 1;
   }
