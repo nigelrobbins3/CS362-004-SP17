@@ -43,7 +43,7 @@ void testAdventurer() {
   state->deck[player][4] = copper;
   state->handCount[player] = 1;
   state->hand[player][0] = adventurer;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = performAdventurerCardEffect(player, 0, state);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 2,
@@ -68,7 +68,7 @@ void testAdventurer() {
   state->handCount[player] = 2; // test different hand sizes in each scenario
   state->hand[player][0] = adventurer;
   state->hand[player][1] = curse; // an irrelevant card
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = performAdventurerCardEffect(player, 0, state);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
@@ -98,7 +98,7 @@ void testAdventurer() {
   state->handCount[player] = 2; // test different hand sizes in each scenario
   state->hand[player][0] = curse;
   state->hand[player][1] = adventurer; // test different adventurer positions
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = performAdventurerCardEffect(player, 1, state);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
@@ -130,7 +130,7 @@ void testAdventurer() {
   state->hand[player][0] = adventurer;
   state->hand[player][1] = curse;
   state->hand[player][2] = curse;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = performAdventurerCardEffect(player, 0, state);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 4,
@@ -165,7 +165,7 @@ void testAdventurer() {
   state->hand[player][0] = curse;
   state->hand[player][1] = curse;
   state->hand[player][2] = adventurer;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = performAdventurerCardEffect(player, 2, state);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
@@ -199,7 +199,7 @@ void testAdventurer() {
   state->hand[player][0] = copper; // NOTE: treasure is needed!!!
   state->hand[player][1] = adventurer;
   state->hand[player][2] = curse;
-  returnValue = performAdventurerCardEffect(player, state);
+  returnValue = performAdventurerCardEffect(player, 1, state);
 
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 2,

@@ -784,15 +784,15 @@ cardtest1.c:
 **********
 Play adventurer with two copper on top of the deck
 Success
-TEST FAILURE: Expected player to have two cards in hand
-TEST FAILURE: Expected the player to have copper in position 0
+Success
+Success
 Success
 Success
 TEST FAILURE: Expected discard to have 1 card
 **********
 Play adventurer with a gold and silver on top of the deck
 Success
-TEST FAILURE: Expected player to have three cards in hand
+Success
 TEST FAILURE: Expected the player to have curse in position 0
 TEST FAILURE: Expected the player to have gold in position 1
 TEST FAILURE: Expected the player to have silver in position 2
@@ -801,16 +801,16 @@ TEST FAILURE: Expected discard to have 1 card
 **********
 Play adventurer with 3 curses and 2 copper in the deck
 Success
-TEST FAILURE: Expected player to have three cards in hand
 Success
-TEST FAILURE: Expected the player to have copper in position 1
+Success
+Success
 Success
 Success
 TEST FAILURE: Expected discard to have 4 cards
 **********
 Play adventurer with only 1 copper in the deck and 1 in the discard
 Success
-TEST FAILURE: Expected player to have 4 cards in hand
+Success
 TEST FAILURE: Expected the player to have curse in position 0
 Success
 TEST FAILURE: Expected the player to have copper in position 2
@@ -820,10 +820,10 @@ TEST FAILURE: Expected discard to have 5 cards
 **********
 Play adventurer with only 1 copper in the deck and 0 in the discard
 Success
-TEST FAILURE: Expected player to have 3 cards in hand
 Success
 Success
-TEST FAILURE: Expected the player to have copper in position 2
+Success
+Success
 Success
 TEST FAILURE: Expected discard to have 6 cards
 **********

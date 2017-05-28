@@ -78,7 +78,7 @@ int main(int argc, char* argv[]) {
    }
 
     // run code under test
-    returnValue = performAdventurerCardEffect(player, state);
+    returnValue = performAdventurerCardEffect(player, handPos, state);
     deckLoss = deckCount - state->deckCount[player];
     discardGain = state->discardCount[player] - discardCount;
     firstDrawnCard = state->hand[player][handCount - 1];
