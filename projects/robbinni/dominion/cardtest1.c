@@ -54,8 +54,8 @@ void testAdventurer() {
              "", "Expected the player to have copper in position 1");
   assertTrue(state->deckCount[player] == 3,
              "", "Expected deckCount to have decreased by 2");
-  assertTrue(state->discardCount[player] == 1, // adventurer is discarded
-             "", "Expected discard to have 1 card");
+  assertTrue(state->discardCount[player] == 0,
+             "", "Expected discard to have 0 cards");
 
   // Test that the same works with gold and silver
   printf("**********\n");
@@ -73,16 +73,16 @@ void testAdventurer() {
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 3,
              "", "Expected player to have three cards in hand");
-  assertTrue(state->hand[player][0] == curse,
-             "", "Expected the player to have curse in position 0");
-  assertTrue(state->hand[player][1] == gold,
-             "", "Expected the player to have gold in position 1");
-  assertTrue(state->hand[player][2] == silver,
-             "", "Expected the player to have silver in position 2");
+  assertTrue(state->hand[player][0] == silver,
+             "", "Expected the player to have silver in position 0");
+  assertTrue(state->hand[player][1] == curse,
+             "", "Expected the player to have curse in position 1");
+  assertTrue(state->hand[player][2] == gold,
+             "", "Expected the player to have gold in position 2");
   assertTrue(state->deckCount[player] == 3,
              "", "Expected deckCount to have decreased by 2");
-  assertTrue(state->discardCount[player] == 1, // adventurer is discarded
-             "", "Expected discard to have 1 card");
+  assertTrue(state->discardCount[player] == 0,
+             "", "Expected discard to have 0 card");
 
   // Test that adventurer ignores non-treasure cards
   printf("**********\n");
@@ -111,8 +111,8 @@ void testAdventurer() {
              "", "Expected the player to have copper in position 2");
   assertTrue(state->deckCount[player] == 0,
              "", "Expected deckCount to have decreased by 5");
-  assertTrue(state->discardCount[player] == 4, // everything is discarded
-             "", "Expected discard to have 4 cards");
+  assertTrue(state->discardCount[player] == 3, // everything is discarded
+             "", "Expected discard to have 3 cards");
 
   // Test that adventurer shuffles the discard into the deck if necessary
   printf("**********\n");
@@ -135,18 +135,18 @@ void testAdventurer() {
   assertTrue(returnValue == 0, "", "Expected adventurer effect to return 0");
   assertTrue(state->handCount[player] == 4,
              "", "Expected player to have 4 cards in hand");
-  assertTrue(state->hand[player][0] == curse,
-             "", "Expected the player to have curse in position 0");
+  assertTrue(state->hand[player][0] == copper,
+             "", "Expected the player to have copper in position 0");
   assertTrue(state->hand[player][1] == curse,
              "", "Expected the player to have curse in position 1");
-  assertTrue(state->hand[player][2] == copper,
-             "", "Expected the player to have copper in position 2");
+  assertTrue(state->hand[player][2] == curse,
+             "", "Expected the player to have curse in position 2");
   assertTrue(state->hand[player][3] == copper,
              "", "Expected the player to have copper in position 3");
   assertTrue(state->deckCount[player] == 0,
              "", "Expected deckCount to have decreased by 5");
-  assertTrue(state->discardCount[player] == 5, // everything is discarded
-             "", "Expected discard to have 5 cards");
+  assertTrue(state->discardCount[player] == 4, // everything is discarded
+             "", "Expected discard to have 4 cards");
 
   // Test that adventurer draws one card if there is only one treasure in the
   // deck + discard piles. 
@@ -178,8 +178,8 @@ void testAdventurer() {
              "", "Expected the player to have copper in position 2");
   assertTrue(state->deckCount[player] == 0,
              "", "Expected deckCount to have decreased by 5");
-  assertTrue(state->discardCount[player] == 6, // everything is discarded
-             "", "Expected discard to have 6 cards");
+  assertTrue(state->discardCount[player] == 5, // everything is discarded
+             "", "Expected discard to have 5 cards");
 
   // Test that adventurer draws nothing if there are no treasures in the
   // deck + discard piles. NOTE: this has a bug which will cause a segfault
@@ -210,8 +210,8 @@ void testAdventurer() {
              "", "Expected the player to have curse in position 1");
   assertTrue(state->deckCount[player] == 0,
              "", "Expected deckCount to have decreased by 5");
-  assertTrue(state->discardCount[player] == 7, // everything is discarded
-             "", "Expected discard to have 7 cards");
+  assertTrue(state->discardCount[player] == 6, // everything is discarded
+             "", "Expected discard to have 6 cards");
 
 
 }
