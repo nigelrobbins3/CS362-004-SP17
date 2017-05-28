@@ -81,6 +81,8 @@ unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c
 	cardtest4 >> unittestresults.out
 	gcov -b -f dominion.c >> unittestresults.out
 
+randomtests: randomtestcard1.out randomtestcard2.out randomtestadventurer.out
+
 randomtestcard1.out: randomtestcard1.c assert_true.o dominion.o rngs.o
 	echo "Result for random testing:" > randomtestcard1.out
 
