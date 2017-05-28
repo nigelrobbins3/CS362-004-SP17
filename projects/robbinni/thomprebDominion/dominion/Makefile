@@ -81,8 +81,6 @@ unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c
 	cardtest4 >> unittestresults.out
 	gcov -b -f dominion.c >> unittestresults.out
 
-randomtests: randomtestcard1.out randomtestcard2.out randomtestadventurer.out
-
 randomtestcard1.out: randomtestcard1.c assert_true.o dominion.o rngs.o
 	echo "Result for random testing:" > randomtestcard1.out
 
@@ -105,6 +103,8 @@ randomtestadventurer.out: randomtestadventurer.c assert_true.o dominion.o rngs.o
 	gcov -b -f dominion.c >> randomtestadventurer.out
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
+
+alltests: tests randomtestcard1.out randomtestcard2.out randomtestadventurer.out
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so

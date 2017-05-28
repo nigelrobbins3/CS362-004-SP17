@@ -1,0 +1,227 @@
+These bug reports are for Rebecca Thompson's dominion code (thompreb)
+
+Tested by: Nigel Robbins (robbinni)
+
+All reports use the "Noverse Bug Reporting Template"
+
+
+=================================
+
+Title: Adventurer fails to draw the correct number of cards
+
+Class: Serious Bug
+
+
+Is it reproducible: Yes
+
+Description
+===========
+When playing the Adventurer card, the player's resulting hand is not correct
+
+
+Steps to Produce/Reproduce
+--------------------------
+ - Call the cardEffect method for the "adventurer" card with any valid game state.
+
+Expected Results
+----------------
+The player should have drawn two treasure cards, discarded the rest, and played 
+the Adventurer
+
+Actual Results
+--------------
+The player has not played the Adventurer card out of their hand, has not
+discarded enough cards, and has too many cards in hand.
+
+
+Workarounds
+-----------
+None
+
+
+
+
+
+=================================
+
+Title: Adventurer fails to be played
+
+Class: Serious Bug
+
+
+Is it reproducible: Yes
+
+Description
+===========
+When playing the Adventurer card, the Adventurer does not appear in "played"
+
+
+Steps to Produce/Reproduce
+--------------------------
+ - Call the cardEffect method for the "adventurer" card with any valid game state.
+
+Expected Results
+----------------
+The Adventurer should appear in played cards
+
+Actual Results
+--------------
+The Adventurer is not in played cards
+
+
+Workarounds
+-----------
+None
+
+
+
+=================================
+
+Title: Adventurer causes segfault without enough treasure
+
+Class: Serious Bug
+
+
+Is it reproducible: Yes
+
+Description
+===========
+When playing the Adventurer card, the game crashes if there aren't enough
+treasure cards.
+
+
+Steps to Produce/Reproduce
+--------------------------
+ - Call the cardEffect method for the "adventurer" card when there are <3
+treasure cards in the player's deck and discard pile.
+
+Expected Results
+----------------
+The player should have drawn however many treasure cards they can, then
+stopped and discarded all the rest.
+
+Actual Results
+--------------
+Segfault
+
+
+Workarounds
+-----------
+Don't create game states with very few treasures. 
+
+Other Information
+-----------------
+This is almost impossible to cause during normal gameplay because there are
+rarely less than 3 treasures.
+
+
+
+
+
+=================================
+
+Title: Smithy fails to draw the correct number of cards
+
+Class: Serious Bug
+
+
+Is it reproducible: Yes
+
+Description
+===========
+When playing the Smithy card, the player draws the wrong number of cards
+
+
+Steps to Produce/Reproduce
+--------------------------
+ - Call the cardEffect method for the "smithy" card with any valid game state.
+
+Expected Results
+----------------
+The player should have drawn three cards
+
+Actual Results
+--------------
+The player has drawn more than three cards from the deck
+
+
+Workarounds
+-----------
+None
+
+
+
+
+
+=================================
+
+Title: Smithy fails to be played
+
+Class: Serious Bug
+
+
+Is it reproducible: Yes
+
+Description
+===========
+When playing the Smithy card, the Smithy does not appear in "played"
+
+
+Steps to Produce/Reproduce
+--------------------------
+ - Call the cardEffect method for the "smithy" card with any valid game state.
+
+Expected Results
+----------------
+The Smithy should appear in played cards
+
+Actual Results
+--------------
+The Smithy is not in played cards
+
+
+Workarounds
+-----------
+None
+
+
+
+
+
+=================================
+
+Title: Tribute is entirely broken
+
+Class: Serious Bug
+
+
+Is it reproducible: Yes
+
+Description
+===========
+When playing the Tribute card, none of the things seem to work.
+
+
+Steps to Produce/Reproduce
+--------------------------
+ - Call the cardEffect method for the "tribute" card with a valid game state,
+Particularly if there are lots of Curse cards.
+
+Expected Results
+----------------
+Tribute should be played, the opponent should have discarded up to 2 cards
+and the player should have recieved benefits based on the cards discarded:
+ - for each unique action card, gain 2 actions
+ - for each unique treasure cards, gain $2
+ - for each unique victory card, draw 2 cards
+
+Actual Results
+--------------
+ - The player has tons of actions and all the other effects are screwed up too.
+ - The next player has not discarded the cards to their discard pile and
+has the wrong number of cards in their deck
+
+
+Workarounds
+-----------
+None

@@ -27,6 +27,36 @@ Success
 Success
 Success
 Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:0.00% of 18
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 3
+
+Function 'playSmithy'
+Lines executed:0.00% of 6
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 3
+
 Function 'updateCoins'
 Lines executed:0.00% of 11
 Branches executed:0.00% of 8
@@ -46,39 +76,10 @@ Taken at least once:0.00% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
-No branches
-Calls executed:0.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:0.00% of 6
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:0.00% of 173
+Branches executed:0.00% of 137
+Taken at least once:0.00% of 137
+Calls executed:0.00% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -183,10 +184,10 @@ Taken at least once:0.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:5.21% of 557
-Branches executed:6.78% of 413
-Taken at least once:6.54% of 413
-Calls executed:0.00% of 95
+Lines executed:5.15% of 563
+Branches executed:6.71% of 417
+Taken at least once:6.47% of 417
+Calls executed:0.00% of 100
 Creating 'dominion.c.gcov'
 
 unittest2.c:
@@ -248,6 +249,36 @@ Success
 Success
 Success
 Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:0.00% of 18
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 3
+
+Function 'playSmithy'
+Lines executed:0.00% of 6
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -267,39 +298,10 @@ Taken at least once:0.00% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
-No branches
-Calls executed:0.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:0.00% of 6
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:0.00% of 173
+Branches executed:0.00% of 137
+Taken at least once:0.00% of 137
+Calls executed:0.00% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -404,10 +406,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:26.21% of 557
-Branches executed:24.21% of 413
-Taken at least once:21.07% of 413
-Calls executed:8.42% of 95
+Lines executed:25.93% of 563
+Branches executed:23.98% of 417
+Taken at least once:20.86% of 417
+Calls executed:8.00% of 100
 Creating 'dominion.c.gcov'
 
 unittest3.c:
@@ -448,6 +450,36 @@ Success
 Success
 Success
 Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:0.00% of 18
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 3
+
+Function 'playSmithy'
+Lines executed:0.00% of 6
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -467,39 +499,10 @@ Taken at least once:83.33% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
-No branches
-Calls executed:0.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:0.00% of 6
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:0.00% of 173
+Branches executed:0.00% of 137
+Taken at least once:0.00% of 137
+Calls executed:0.00% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -604,10 +607,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:28.37% of 557
-Branches executed:25.67% of 413
-Taken at least once:22.28% of 413
-Calls executed:8.42% of 95
+Lines executed:28.06% of 563
+Branches executed:25.42% of 417
+Taken at least once:22.06% of 417
+Calls executed:8.00% of 100
 Creating 'dominion.c.gcov'
 
 unittest4.c:
@@ -618,6 +621,36 @@ Success
 Success
 Success
 Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:0.00% of 18
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 3
+
+Function 'playSmithy'
+Lines executed:0.00% of 6
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -637,39 +670,10 @@ Taken at least once:83.33% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
-No branches
-Calls executed:0.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:0.00% of 6
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:0.00% of 17
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:0.00% of 173
+Branches executed:0.00% of 137
+Taken at least once:0.00% of 137
+Calls executed:0.00% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -774,66 +778,96 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:30.16% of 557
-Branches executed:27.60% of 413
-Taken at least once:24.21% of 413
-Calls executed:8.42% of 95
+Lines executed:29.84% of 563
+Branches executed:27.34% of 417
+Taken at least once:23.98% of 417
+Calls executed:8.00% of 100
 Creating 'dominion.c.gcov'
 
 cardtest1.c:
 **********
 Play adventurer with two copper on top of the deck
 Success
+TEST FAILURE: Expected player to have two cards in hand
+TEST FAILURE: Expected the player to have copper in position 0
 Success
-Success
-Success
-Success
-Success
+TEST FAILURE: Expected deckCount to have decreased by 2
+TEST FAILURE: Expected discard to have 1 card
 **********
 Play adventurer with a gold and silver on top of the deck
 Success
-Success
-Success
-Success
-Success
-Success
-Success
+TEST FAILURE: Expected player to have three cards in hand
+TEST FAILURE: Expected the player to have curse in position 0
+TEST FAILURE: Expected the player to have gold in position 1
+TEST FAILURE: Expected the player to have silver in position 2
+TEST FAILURE: Expected deckCount to have decreased by 2
+TEST FAILURE: Expected discard to have 1 card
 **********
 Play adventurer with 3 curses and 2 copper in the deck
 Success
+TEST FAILURE: Expected player to have three cards in hand
 Success
+TEST FAILURE: Expected the player to have copper in position 1
+TEST FAILURE: Expected the player to have copper in position 2
 Success
-Success
-Success
-Success
-Success
+TEST FAILURE: Expected discard to have 4 cards
 **********
 Play adventurer with only 1 copper in the deck and 1 in the discard
 Success
+TEST FAILURE: Expected player to have 4 cards in hand
+TEST FAILURE: Expected the player to have curse in position 0
 Success
+TEST FAILURE: Expected the player to have copper in position 2
+TEST FAILURE: Expected the player to have copper in position 3
 Success
-Success
-Success
-Success
-Success
-Success
+TEST FAILURE: Expected discard to have 5 cards
 **********
 Play adventurer with only 1 copper in the deck and 0 in the discard
 Success
+TEST FAILURE: Expected player to have 3 cards in hand
 Success
 Success
+TEST FAILURE: Expected the player to have copper in position 2
 Success
-Success
-Success
-Success
+TEST FAILURE: Expected discard to have 6 cards
 **********
 Play adventurer with no treasures
 Success
+TEST FAILURE: Expected player to have 2 cards in hand
+TEST FAILURE: Expected the player to have curse in position 0
+TEST FAILURE: Expected the player to have curse in position 1
 Success
-Success
-Success
-Success
-Success
+TEST FAILURE: Expected discard to have 7 cards
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:100.00% of 18
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 3
+
+Function 'playSmithy'
+Lines executed:0.00% of 6
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -853,39 +887,10 @@ Taken at least once:83.33% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
-No branches
-Calls executed:0.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:0.00% of 6
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:100.00% of 17
-Branches executed:100.00% of 12
-Taken at least once:100.00% of 12
-Calls executed:100.00% of 2
+Lines executed:4.05% of 173
+Branches executed:16.79% of 137
+Taken at least once:1.46% of 137
+Calls executed:3.70% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -924,7 +929,7 @@ Taken at least once:0.00% of 6
 Calls executed:0.00% of 3
 
 Function 'whoseTurn'
-Lines executed:0.00% of 2
+Lines executed:100.00% of 2
 No branches
 No calls
 
@@ -990,17 +995,17 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:35.91% of 557
-Branches executed:31.48% of 413
-Taken at least once:28.57% of 413
-Calls executed:11.58% of 95
+Lines executed:37.30% of 563
+Branches executed:36.69% of 417
+Taken at least once:28.78% of 417
+Calls executed:14.00% of 100
 Creating 'dominion.c.gcov'
 
 cardtest2.c:
 Player 1 plays smithy
 Success
-Success
-Success
+TEST FAILURE: Expected player to have 3 cards in hand
+TEST FAILURE: Expected deck to have 2 cards left
 Success
 Success
 Success
@@ -1023,6 +1028,7 @@ Success
 Player 2 plays smithy
 Success
 TEST FAILURE: Expected player to have 3 cards in hand
+TEST FAILURE: Expected deck to have 2 cards left
 Success
 Success
 Success
@@ -1042,7 +1048,36 @@ Success
 Success
 Success
 Success
-Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:100.00% of 18
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 3
+
+Function 'playSmithy'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -1062,39 +1097,10 @@ Taken at least once:83.33% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:0.00% of 5
-No branches
-Calls executed:0.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:100.00% of 6
-Branches executed:100.00% of 2
-Taken at least once:100.00% of 2
-Calls executed:100.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:100.00% of 17
-Branches executed:100.00% of 12
-Taken at least once:100.00% of 12
-Calls executed:100.00% of 2
+Lines executed:5.20% of 173
+Branches executed:16.79% of 137
+Taken at least once:2.92% of 137
+Calls executed:5.56% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -1133,7 +1139,7 @@ Taken at least once:0.00% of 6
 Calls executed:0.00% of 3
 
 Function 'whoseTurn'
-Lines executed:0.00% of 2
+Lines executed:100.00% of 2
 No branches
 No calls
 
@@ -1199,10 +1205,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:36.98% of 557
-Branches executed:31.96% of 413
-Taken at least once:29.06% of 413
-Calls executed:13.68% of 95
+Lines executed:38.72% of 563
+Branches executed:37.17% of 417
+Taken at least once:29.74% of 417
+Calls executed:18.00% of 100
 Creating 'dominion.c.gcov'
 
 cardtest3.c:
@@ -1254,6 +1260,36 @@ Success
 Success
 Success
 Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:100.00% of 18
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 3
+
+Function 'playSmithy'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -1273,39 +1309,10 @@ Taken at least once:83.33% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:0.00% of 35
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-Calls executed:0.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:100.00% of 5
-No branches
-Calls executed:100.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:100.00% of 6
-Branches executed:100.00% of 2
-Taken at least once:100.00% of 2
-Calls executed:100.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:100.00% of 17
-Branches executed:100.00% of 12
-Taken at least once:100.00% of 12
-Calls executed:100.00% of 2
+Lines executed:7.51% of 173
+Branches executed:16.79% of 137
+Taken at least once:3.65% of 137
+Calls executed:9.26% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -1344,7 +1351,7 @@ Taken at least once:0.00% of 6
 Calls executed:0.00% of 3
 
 Function 'whoseTurn'
-Lines executed:0.00% of 2
+Lines executed:100.00% of 2
 No branches
 No calls
 
@@ -1410,10 +1417,10 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:37.88% of 557
-Branches executed:31.96% of 413
-Taken at least once:29.06% of 413
-Calls executed:15.79% of 95
+Lines executed:39.43% of 563
+Branches executed:37.17% of 417
+Taken at least once:29.98% of 417
+Calls executed:20.00% of 100
 Creating 'dominion.c.gcov'
 
 cardtest4.c:
@@ -1424,7 +1431,7 @@ Play tribute against opponent with no cards
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
+Success
 TEST FAILURE: Expected numActions to be 1
 Success
 Success
@@ -1438,7 +1445,7 @@ Play tribute against opponent with 1 treasure card
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
+Success
 TEST FAILURE: Expected numActions to be 1
 Success
 Success
@@ -1456,7 +1463,7 @@ Play tribute against opponent with 1 action card
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
+Success
 TEST FAILURE: Expected numActions to be 3
 Success
 Success
@@ -1504,359 +1511,11 @@ Play tribute against opponent with 1 victory card
 Success
 TEST FAILURE: Expected player handCount to be 6
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 3
+Success
 TEST FAILURE: Expected numActions to be 1
 Success
 Success
 TEST FAILURE: Expected next player discardCount to be 1
-Success
-Success
-Success
-Success
-Success
-TEST FAILURE: Expected to receive 2 cards
-Success
-TEST FAILURE: Expected to receive 2 cards
-Success
-TEST FAILURE: Expected to receive 2 cards
-Success
-TEST FAILURE: Expected to receive 2 cards
-
-Play tribute against opponent with 2 victory cards
-Success
-TEST FAILURE: Expected player handCount to be 8
-TEST FAILURE: Expected player discardCount to be 6
-Success
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 2 action cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-Success
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 2 treasure cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-TEST FAILURE: Expected to receive 4 coins
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 2 duplicate cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 1 action and 1 treasure
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 3
-TEST FAILURE: Expected to receive 2 coins
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-
-Player 2
-Play tribute against opponent with no cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-Success
-Success
-Success
-Success
-Success
-
-Play tribute against opponent with 1 treasure card
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 1
-Success
-Success
-Success
-Success
-Success
-Success
-Success
-Success
-
-Play tribute against opponent with 1 action card
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 3
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 1
-Success
-Success
-Success
-Success
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-
-Play tribute against opponent with 1 victory card
-Success
-TEST FAILURE: Expected player handCount to be 6
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 3
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 1
-Success
-Success
-Success
-Success
-Success
-TEST FAILURE: Expected to receive 2 cards
-Success
-TEST FAILURE: Expected to receive 2 cards
-Success
-TEST FAILURE: Expected to receive 2 cards
-Success
-TEST FAILURE: Expected to receive 2 cards
-
-Play tribute against opponent with 2 victory cards
-Success
-TEST FAILURE: Expected player handCount to be 8
-TEST FAILURE: Expected player discardCount to be 6
-Success
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 2 action cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-Success
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 2 treasure cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-TEST FAILURE: Expected to receive 4 coins
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 2 duplicate cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-Play tribute against opponent with 1 action and 1 treasure
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 3
-TEST FAILURE: Expected to receive 2 coins
-Success
-TEST FAILURE: Expected next player discardCount to be 2
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-
-
-Player 3
-Play tribute against opponent with no cards
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-Success
-Success
-Success
-Success
-Success
-
-Play tribute against opponent with 1 treasure card
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 1
-TEST FAILURE: Expected to recieve 2 coins
-Success
-TEST FAILURE: Expected next player discardCount to be 1
-TEST FAILURE: Expected next player deckCount to be 0
-Success
-Success
-Success
-Success
-TEST FAILURE: Expected to receive 2 coins
-Success
-TEST FAILURE: Expected to receive 2 coins
-
-Play tribute against opponent with 1 action card
-Success
-TEST FAILURE: Expected player handCount to be 4
-TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
-TEST FAILURE: Expected numActions to be 3
-Success
-Success
-Success
-Success
-Success
-Success
-Success
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-Success
-TEST FAILURE: Expected to receive 2 actions
-
-Play tribute against opponent with 1 victory card
-Success
-TEST FAILURE: Expected player handCount to be 6
-TEST FAILURE: Expected player discardCount to be 6
-Success
-TEST FAILURE: Expected numActions to be 1
-Success
-Success
-Success
 Success
 Success
 Success
@@ -1878,8 +1537,8 @@ TEST FAILURE: Expected player deckCount to be 1
 TEST FAILURE: Expected numActions to be 1
 Success
 Success
-Success
-Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
 Success
 Success
 Success
@@ -1888,8 +1547,8 @@ Play tribute against opponent with 2 action cards
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
 Success
+TEST FAILURE: Expected numActions to be 5
 Success
 Success
 TEST FAILURE: Expected next player discardCount to be 2
@@ -1902,7 +1561,7 @@ Play tribute against opponent with 2 treasure cards
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
+Success
 TEST FAILURE: Expected numActions to be 1
 TEST FAILURE: Expected to receive 4 coins
 Success
@@ -1916,9 +1575,9 @@ Play tribute against opponent with 2 duplicate cards
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
+Success
 TEST FAILURE: Expected numActions to be 1
-TEST FAILURE: Expected to receive 2 coins
+Success
 Success
 TEST FAILURE: Expected next player discardCount to be 2
 TEST FAILURE: Expected next player deckCount to be 0
@@ -1930,7 +1589,7 @@ Play tribute against opponent with 1 action and 1 treasure
 Success
 TEST FAILURE: Expected player handCount to be 4
 TEST FAILURE: Expected player discardCount to be 6
-TEST FAILURE: Expected player deckCount to be 5
+Success
 TEST FAILURE: Expected numActions to be 3
 TEST FAILURE: Expected to receive 2 coins
 Success
@@ -1939,6 +1598,384 @@ TEST FAILURE: Expected next player deckCount to be 0
 Success
 Success
 Success
+
+
+Player 2
+Play tribute against opponent with no cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+
+Play tribute against opponent with 1 treasure card
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 1
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+
+Play tribute against opponent with 1 action card
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 3
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 1
+Success
+Success
+Success
+Success
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+
+Play tribute against opponent with 1 victory card
+Success
+TEST FAILURE: Expected player handCount to be 6
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 1
+Success
+Success
+Success
+Success
+Success
+TEST FAILURE: Expected to receive 2 cards
+Success
+TEST FAILURE: Expected to receive 2 cards
+Success
+TEST FAILURE: Expected to receive 2 cards
+Success
+TEST FAILURE: Expected to receive 2 cards
+
+Play tribute against opponent with 2 victory cards
+Success
+TEST FAILURE: Expected player handCount to be 8
+TEST FAILURE: Expected player discardCount to be 6
+TEST FAILURE: Expected player deckCount to be 1
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 2 action cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 5
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 2 treasure cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+TEST FAILURE: Expected to receive 4 coins
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 2 duplicate cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 1 action and 1 treasure
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 3
+TEST FAILURE: Expected to receive 2 coins
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+
+Player 3
+Play tribute against opponent with no cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+
+Play tribute against opponent with 1 treasure card
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 1
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+
+Play tribute against opponent with 1 action card
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 3
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 1
+Success
+Success
+Success
+Success
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+Success
+TEST FAILURE: Expected to receive 2 actions
+
+Play tribute against opponent with 1 victory card
+Success
+TEST FAILURE: Expected player handCount to be 6
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 1
+Success
+Success
+Success
+Success
+Success
+TEST FAILURE: Expected to receive 2 cards
+Success
+TEST FAILURE: Expected to receive 2 cards
+Success
+TEST FAILURE: Expected to receive 2 cards
+Success
+TEST FAILURE: Expected to receive 2 cards
+
+Play tribute against opponent with 2 victory cards
+Success
+TEST FAILURE: Expected player handCount to be 8
+TEST FAILURE: Expected player discardCount to be 6
+TEST FAILURE: Expected player deckCount to be 1
+TEST FAILURE: Expected numActions to be 1
+TEST FAILURE: Expected coins to not change
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 2 action cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 5
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 2 treasure cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 2 duplicate cards
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 1
+Success
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+
+Play tribute against opponent with 1 action and 1 treasure
+Success
+TEST FAILURE: Expected player handCount to be 4
+TEST FAILURE: Expected player discardCount to be 6
+Success
+TEST FAILURE: Expected numActions to be 3
+TEST FAILURE: Expected to receive 2 coins
+Success
+TEST FAILURE: Expected next player discardCount to be 2
+TEST FAILURE: Expected next player deckCount to be 0
+Success
+Success
+Success
+Function 'playCutpurse'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 4
+
+Function 'playAmbassador'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 26
+Taken at least once:0.00% of 26
+Calls executed:0.00% of 4
+
+Function 'playFeast'
+Lines executed:0.00% of 17
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 6
+
+Function 'playAdventurer'
+Lines executed:100.00% of 18
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 3
+
+Function 'playSmithy'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 3
+
 Function 'updateCoins'
 Lines executed:81.82% of 11
 Branches executed:100.00% of 8
@@ -1958,39 +1995,10 @@ Taken at least once:83.33% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:0.00% of 166
-Branches executed:0.00% of 143
-Taken at least once:0.00% of 143
-Calls executed:0.00% of 55
-
-Function 'performFeastCardEffect'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 5
-
-Function 'performTributeCardEffect'
-Lines executed:100.00% of 35
-Branches executed:100.00% of 28
-Taken at least once:100.00% of 28
-Calls executed:100.00% of 3
-
-Function 'performVillageCardEffect'
-Lines executed:100.00% of 5
-No branches
-Calls executed:100.00% of 2
-
-Function 'performSmithyCardEffect'
-Lines executed:100.00% of 6
-Branches executed:100.00% of 2
-Taken at least once:100.00% of 2
-Calls executed:100.00% of 2
-
-Function 'performAdventurerCardEffect'
-Lines executed:100.00% of 17
-Branches executed:100.00% of 12
-Taken at least once:100.00% of 12
-Calls executed:100.00% of 2
+Lines executed:26.01% of 173
+Branches executed:38.69% of 137
+Taken at least once:26.28% of 137
+Calls executed:14.81% of 54
 
 Function 'getCost'
 Lines executed:96.67% of 30
@@ -2029,7 +2037,7 @@ Taken at least once:0.00% of 6
 Calls executed:0.00% of 3
 
 Function 'whoseTurn'
-Lines executed:0.00% of 2
+Lines executed:100.00% of 2
 No branches
 No calls
 
@@ -2095,9 +2103,9 @@ Taken at least once:75.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:45.24% of 557
-Branches executed:39.23% of 413
-Taken at least once:36.80% of 413
-Calls executed:18.95% of 95
+Lines executed:46.18% of 563
+Branches executed:44.84% of 417
+Taken at least once:38.37% of 417
+Calls executed:23.00% of 100
 Creating 'dominion.c.gcov'
 
