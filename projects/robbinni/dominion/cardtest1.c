@@ -182,8 +182,7 @@ void testAdventurer() {
              "", "Expected discard to have 5 cards");
 
   // Test that adventurer draws nothing if there are no treasures in the
-  // deck + discard piles. NOTE: this has a bug which will cause a segfault
-  // if there are no treasures in the players hand at the beginning!
+  // deck + discard piles.
   printf("**********\n");
   printf("Play adventurer with no treasures\n");
   resetGame(state);
@@ -196,7 +195,7 @@ void testAdventurer() {
   state->deck[player][3] = curse;
   state->deck[player][4] = curse;
   state->handCount[player] = 3; // test different hand sizes in each scenario
-  state->hand[player][0] = copper; // NOTE: treasure is needed!!!
+  state->hand[player][0] = curse;
   state->hand[player][1] = adventurer;
   state->hand[player][2] = curse;
   returnValue = performAdventurerCardEffect(player, 1, state);
