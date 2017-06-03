@@ -35,30 +35,24 @@ public class UrlValidatorTest extends TestCase {
    public UrlValidatorTest(String testName) {
       super(testName);
    }
-
-   
-   private void logResult(UrlValidator uVal, String url) {
-	   System.out.println(uVal.isValid(url));
-   }
    
    public void testManualTest()
    {
 	   UrlValidator uVal = new UrlValidator(new String[] {"http", "gopher"}, 0);
-	   
-	   
-	   logResult(uVal, "http://a.m.a.z.o.n.com");
-	   logResult(uVal, "http://www.a.m.a.z.o.n.com");
-	   logResult(uVal, "http://www.reallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurl.com");
-	   logResult(uVal, "http://www.semicolonandunderscoresinpath.com/path;_123sdfjni");
-	   logResult(uVal, "http://www.parentheses.com/copyofcopyofEssay(1).docx");
-	   logResult(uVal, "http://www.google.com:80/test1?action=view true");
-	   logResult(uVal, "http://0.0.0.0:80/test1?action=view true");
 	   UrlValidator uVal2 = new UrlValidator(UrlValidator.ALLOW_LOCAL_URLS);
-	   logResult(uVal, "http://localhost:80");
-	   logResult(uVal2, "http://localhost:80");
-	   logResult(uVal, "http://hostname:80");
-	   logResult(uVal2, "http://hostname:80");
-   }
+	   
+	   assertEquals(uVal.isValid("http://a.m.a.z.o.n.com"), true);
+	   assertEquals(uVal.isValid("http://www.a.m.a.z.o.n.com"), true);
+	   assertEquals(uVal.isValid("http://www.reallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurl.com"), true);
+	   assertEquals(uVal.isValid("http://www.semicolonandunderscoresinpath.com/path;_123sdfjni"), true);
+	   assertEquals(uVal.isValid("http://www.parentheses.com/copyofcopyofEssay(1).docx"), true);
+	   assertEquals(uVal.isValid("http://www.google.com:80/test1?action=view true"), true);
+	   assertEquals(uVal.isValid("http://0.0.0.0:80/test1?action=view true"), true);
+	   assertEquals(uVal.isValid("http://localhost:80"), false);
+	   assertEquals(uVal2.isValid("http://localhost:80"), true);
+	   assertEquals(uVal.isValid("http://hostname:80"), false);
+	   assertEquals(uVal2.isValid("http://hostname:80"), true);
+   }                            
    
    
    public void testYourFirstPartition()
