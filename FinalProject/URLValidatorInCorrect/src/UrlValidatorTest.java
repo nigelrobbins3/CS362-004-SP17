@@ -37,13 +37,27 @@ public class UrlValidatorTest extends TestCase {
    }
 
    
+   private void logResult(UrlValidator uVal, String url) {
+	   System.out.println(uVal.isValid(url));
+   }
    
    public void testManualTest()
    {
-	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
-	   System.out.println(urlVal.isValid("http://www.amazon.com"));
+	   UrlValidator uVal = new UrlValidator(new String[] {"http", "gopher"}, 0);
 	   
 	   
+	   logResult(uVal, "http://a.m.a.z.o.n.com");
+	   logResult(uVal, "http://www.a.m.a.z.o.n.com");
+	   logResult(uVal, "http://www.reallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurl.com");
+	   logResult(uVal, "http://www.semicolonandunderscoresinpath.com/path;_123sdfjni");
+	   logResult(uVal, "http://www.parentheses.com/copyofcopyofEssay(1).docx");
+	   logResult(uVal, "http://www.google.com:80/test1?action=view true");
+	   logResult(uVal, "http://0.0.0.0:80/test1?action=view true");
+	   UrlValidator uVal2 = new UrlValidator(UrlValidator.ALLOW_LOCAL_URLS);
+	   logResult(uVal, "http://localhost:80");
+	   logResult(uVal2, "http://localhost:80");
+	   logResult(uVal, "http://hostname:80");
+	   logResult(uVal2, "http://hostname:80");
    }
    
    
