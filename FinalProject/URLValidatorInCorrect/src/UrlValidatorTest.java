@@ -123,15 +123,72 @@ public class UrlValidatorTest extends TestCase {
    }                            
    
    
-   public void testYourFirstPartition()
+   public void testSchemePartition()
    {
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"}, 0);
 	   
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   assertEquals(uVal.isValid("www.go.com"), true);
+	   assertEquals(uVal.isValid("HTTP://www.go.com"), true);
+	   assertEquals(uVal.isValid("htt://www.go.com"), false);
+	   assertEquals(uVal.isValid("aaa://www.go.com"), false);
+	   assertEquals(uVal.isValid("://www.go.com"), false);
+	   assertEquals(uVal.isValid("http:/www.go.com"), false);
    }
    
-   public void testYourSecondPartition(){
+   public void testAuthorityPartition(){
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
 	   
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   assertEquals(uVal.isValid("http://"), false);
+	   assertEquals(uVal.isValid("http://WWW.GO.COM"), true);
+	   assertEquals(uVal.isValid("http://go.com"), true);
+	   assertEquals(uVal.isValid("http://www.go"), false);
+	   assertEquals(uVal.isValid("http://localhost"), false);
+	   assertEquals(uVal.isValid("http://0.0.0.0"), true);
+	   assertEquals(uVal.isValid("http://255.255.255.255"), true);
+	   assertEquals(uVal.isValid("http://255.255.255.256"), false);
    }
    
+   public void testPortPartition(){
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
+	   
+	   assertEquals(uVal.isValid("http://www.go.com:80"), true);
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   assertEquals(uVal.isValid("http://www.go.com:-1"), false);
+	   assertEquals(uVal.isValid("http://www.go.com:65536"), true);
+   }
+
+   public void testPathPartition(){
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
+	   
+	   assertEquals(uVal.isValid("http://www.go.com/path"), true);
+	   assertEquals(uVal.isValid("http://www.go.com/PATH"), true);
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+   }
+
+   public void testQueryPartition(){
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
+	   
+	   assertEquals(uVal.isValid("http://www.go.com?q=query"), true);
+	   assertEquals(uVal.isValid("http://www.go.com?Q=QUERY"), true);
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+   }
+
+   public void testFlagsPartition(){
+	   // ALLOW_ALL_SCHEMES = true
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"}, UrlValidator.ALLOW_ALL_SCHEMES);
+	   
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   assertEquals(uVal.isValid("aaa://www.go.com"), true);
+	   assertEquals(uVal.isValid("://www.go.com"), false);
+	   
+	   // ALLOW_LOCAL_URLS = true
+	   uVal = new UrlValidator(new String[] {"http"}, UrlValidator.ALLOW_LOCAL_URLS);
+	   
+	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   assertEquals(uVal.isValid("http://localhost"), true);
+   }
    
    public void testIsValid()
    {
