@@ -36,158 +36,196 @@ public class UrlValidatorTest extends TestCase {
       super(testName);
    }
    
+   private boolean logMismatched(UrlValidator uVal, String url, boolean exResult) {
+	   boolean result = uVal.isValid(url);
+	   if (result != exResult) {
+		   System.out.println("Error: " + url);
+		   return false;
+	   }
+	   return true;
+   }
+   
    public void testManualTest()
    {
 	   UrlValidator uVal = new UrlValidator(new String[] {"http", "gopher"}, 0);
 	   UrlValidator uVal2 = new UrlValidator(UrlValidator.ALLOW_LOCAL_URLS);
 	   
-	   assertEquals(uVal.isValid(""), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80/path?q=query&q2=this"), true);
-	   assertEquals(uVal.isValid("www.amazon.com:80/path?q=query&q2=this"), false);
-	   assertEquals(uVal.isValid("http://:80/path?q=query&q2=this"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com/path?q=query&q2=this"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80/?q=query&q2=this"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80/path?q=query"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80/path"), true);
-	   assertEquals(uVal.isValid("htt://www.amazon.com"), false);
-	   assertEquals(uVal.isValid("http//www.amazon.com"), false);
-	   assertEquals(uVal.isValid("http:/www.amazon.com"), false);
-	   assertEquals(uVal.isValid("0http://www.amazon.com"), false);
-	   assertEquals(uVal.isValid("htt0p://www.amazon.com"), false);
-	   assertEquals(uVal.isValid("HTTP://www.amazon.com"), true);
-	   assertEquals(uVal.isValid("http://amazon.com"), true);
-	   assertEquals(uVal.isValid("http://www.com"), true);
-	   assertEquals(uVal.isValid("http://www.amazon"), false);
-	   assertEquals(uVal.isValid("http://amazon"), false);
-	   assertEquals(uVal.isValid("http://www.AMAZON.com"), true);
-	   assertEquals(uVal.isValid("http://www.0amazon.com"), true);
-	   assertEquals(uVal.isValid("http://www.amaz0n.com"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.5"), false);
-	   assertEquals(uVal.isValid("http://0.0.00.0"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:nan"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:65535"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:65536"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:65537"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:54.43"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:-5"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:0"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/0544"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/PATH"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/-p"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/pa:th"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/path/"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/longer/path"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/pa//th"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com//path"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com/ /"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?basic=query"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?basic=222"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?000=query"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?basic"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?basic="), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?basic=&q=none"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/&query"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/?=query"), true);
+	   System.out.println("--- Manual tests ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80/path?q=query&q2=this", true);
+	   passed &= logMismatched(uVal, "www.amazon.com:80/path?q=query&q2=this", false);
+	   passed &= logMismatched(uVal, "http://:80/path?q=query&q2=this", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/path?q=query&q2=this", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80/?q=query&q2=this", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80/path?q=query", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80/path", true);
+	   passed &= logMismatched(uVal, "htt://www.amazon.com", false);
+	   passed &= logMismatched(uVal, "http//www.amazon.com", false);
+	   passed &= logMismatched(uVal, "http:/www.amazon.com", false);
+	   passed &= logMismatched(uVal, "0http://www.amazon.com", false);
+	   passed &= logMismatched(uVal, "htt0p://www.amazon.com", false);
+	   passed &= logMismatched(uVal, "HTTP://www.amazon.com", true);
+	   passed &= logMismatched(uVal, "http://amazon.com", true);
+	   passed &= logMismatched(uVal, "http://www.com", true);
+	   passed &= logMismatched(uVal, "http://www.amazon", false);
+	   passed &= logMismatched(uVal, "http://amazon", false);
+	   passed &= logMismatched(uVal, "http://www.AMAZON.com", true);
+	   passed &= logMismatched(uVal, "http://www.0amazon.com", true);
+	   passed &= logMismatched(uVal, "http://www.amaz0n.com", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.5", false);
+	   passed &= logMismatched(uVal, "http://0.0.00.0", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:nan", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:65535", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:65536", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:65537", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:54.43", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:-5", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:0", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/0544", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/PATH", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/-p", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/pa:th", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/path/", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/longer/path", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/pa//th", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com//path", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/ /", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?basic=query", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?basic=222", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?000=query", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?basic", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?basic=", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?basic=&q=none", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/&query", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/?=query", true);
 	   
-	   assertEquals(uVal.isValid("http://www.amazon.com"), true);
-	   assertEquals(uVal.isValid("http://"), false);
-	   assertEquals(uVal.isValid("aaa://www.amazon.com"), false);
-	   assertEquals(uVal.isValid("www.amazon.com"), false);
-	   assertEquals(uVal.isValid("amazon.com"), false);
-	   assertEquals(uVal.isValid("amazon.com:80"), false);
-	   assertEquals(uVal.isValid("amazon.com:80/abc"), false);
-	   assertEquals(uVal.isValid("http://www.a mazon.com"), false);
-	   assertEquals(uVal.isValid("http://www.com"), true);
-	   assertEquals(uVal.isValid("http://www..com"), false);
-	   assertEquals(uVal.isValid("http://www._.com"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80/abc"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com:-1/abc"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80.1/abc"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:a/abc"), false);
-	   assertEquals(uVal.isValid("http://www.amazon.com:80/1"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com/1"), true);
-	   assertEquals(uVal.isValid("http://www.amazon.com."), false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com", true);
+	   passed &= logMismatched(uVal, "http://", false);
+	   passed &= logMismatched(uVal, "aaa://www.amazon.com", false);
+	   passed &= logMismatched(uVal, "www.amazon.com", false);
+	   passed &= logMismatched(uVal, "amazon.com", false);
+	   passed &= logMismatched(uVal, "amazon.com:80", false);
+	   passed &= logMismatched(uVal, "amazon.com:80/abc", false);
+	   passed &= logMismatched(uVal, "http://www.a mazon.com", false);
+	   passed &= logMismatched(uVal, "http://www.com", true);
+	   passed &= logMismatched(uVal, "http://www..com", false);
+	   passed &= logMismatched(uVal, "http://www._.com", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80/abc", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:-1/abc", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80.1/abc", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:a/abc", false);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:80/1", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com/1", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com.", false);
 	   
-	   assertEquals(uVal.isValid("http://a.m.a.z.o.n.com"), true);
-	   assertEquals(uVal.isValid("http://www.a.m.a.z.o.n.com"), true);
-	   assertEquals(uVal.isValid("http://www.reallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurl.com"), true);
-	   assertEquals(uVal.isValid("http://www.semicolonandunderscoresinpath.com/path;_123sdfjni"), true);
-	   assertEquals(uVal.isValid("http://www.parentheses.com/copyofcopyofEssay(1).docx"), true);
-	   assertEquals(uVal.isValid("http://www.google.com:80/test1?action=view true"), true);
-	   assertEquals(uVal.isValid("http://0.0.0.0:80/test1?action=view true"), true);
-	   assertEquals(uVal.isValid("http://localhost:80"), false);
-	   assertEquals(uVal2.isValid("http://localhost:80"), true);
-	   assertEquals(uVal.isValid("http://hostname:80"), false);
-	   assertEquals(uVal2.isValid("http://hostname:80"), true);
+	   passed &= logMismatched(uVal, "http://a.m.a.z.o.n.com", true);
+	   passed &= logMismatched(uVal, "http://www.a.m.a.z.o.n.com", true);
+	   passed &= logMismatched(uVal, "http://www.reallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurlreallylongurl.com", true);
+	   passed &= logMismatched(uVal, "http://www.semicolonandunderscoresinpath.com/path;_123sdfjni", true);
+	   passed &= logMismatched(uVal, "http://www.parentheses.com/copyofcopyofEssay(1).docx", true);
+	   passed &= logMismatched(uVal, "http://www.google.com:80/test1?action=view true", true);
+	   passed &= logMismatched(uVal, "http://0.0.0.0:80/test1?action=view true", true);
+	   passed &= logMismatched(uVal, "http://localhost:80", false);
+	   passed &= logMismatched(uVal2, "http://localhost:80", true);
+	   passed &= logMismatched(uVal, "http://hostname:80", false);
+	   passed &= logMismatched(uVal2, "http://hostname:80", true);
+	   
+	   assertTrue(passed); // perform all calculations first (&= doesn't shortcircuit) then perform the test
    }                            
    
    
    public void testSchemePartition()
    {
 	   UrlValidator uVal = new UrlValidator(new String[] {"http"}, 0);
+
+	   System.out.println("--- Scheme partition ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   passed &= logMismatched(uVal, "www.go.com", true);
+	   passed &= logMismatched(uVal, "HTTP://www.go.com", true);
+	   passed &= logMismatched(uVal, "htt://www.go.com", false);
+	   passed &= logMismatched(uVal, "aaa://www.go.com", false);
+	   passed &= logMismatched(uVal, "://www.go.com", false);
+	   passed &= logMismatched(uVal, "http:/www.go.com", false);
 	   
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
-	   assertEquals(uVal.isValid("www.go.com"), true);
-	   assertEquals(uVal.isValid("HTTP://www.go.com"), true);
-	   assertEquals(uVal.isValid("htt://www.go.com"), false);
-	   assertEquals(uVal.isValid("aaa://www.go.com"), false);
-	   assertEquals(uVal.isValid("://www.go.com"), false);
-	   assertEquals(uVal.isValid("http:/www.go.com"), false);
+	   assertTrue(passed);
    }
    
    public void testAuthorityPartition(){
 	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
 	   
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
-	   assertEquals(uVal.isValid("http://"), false);
-	   assertEquals(uVal.isValid("http://WWW.GO.COM"), true);
-	   assertEquals(uVal.isValid("http://go.com"), true);
-	   assertEquals(uVal.isValid("http://www.go"), false);
-	   assertEquals(uVal.isValid("http://localhost"), false);
-	   assertEquals(uVal.isValid("http://0.0.0.0"), true);
-	   assertEquals(uVal.isValid("http://255.255.255.255"), true);
-	   assertEquals(uVal.isValid("http://255.255.255.256"), false);
+	   System.out.println("--- Authority partition ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   passed &= logMismatched(uVal, "http://", false);
+	   passed &= logMismatched(uVal, "http://WWW.GO.COM", true);
+	   passed &= logMismatched(uVal, "http://go.com", true);
+	   passed &= logMismatched(uVal, "http://www.go", false);
+	   passed &= logMismatched(uVal, "http://localhost", false);
+	   passed &= logMismatched(uVal, "http://0.0.0.0", true);
+	   passed &= logMismatched(uVal, "http://255.255.255.255", true);
+	   passed &= logMismatched(uVal, "http://255.255.255.256", false);
+	   
+	   assertTrue(passed);
    }
    
    public void testPortPartition(){
 	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
 	   
-	   assertEquals(uVal.isValid("http://www.go.com:80"), true);
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
-	   assertEquals(uVal.isValid("http://www.go.com:-1"), false);
-	   assertEquals(uVal.isValid("http://www.go.com:65536"), true);
+	   System.out.println("--- Port Partition ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com:80", true);
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   passed &= logMismatched(uVal, "http://www.go.com:-1", false);
+	   passed &= logMismatched(uVal, "http://www.go.com:65536", true);
+	   
+	   assertTrue(passed);
    }
 
    public void testPathPartition(){
 	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
 	   
-	   assertEquals(uVal.isValid("http://www.go.com/path"), true);
-	   assertEquals(uVal.isValid("http://www.go.com/PATH"), true);
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   System.out.println("--- Path partition ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com/path", true);
+	   passed &= logMismatched(uVal, "http://www.go.com/PATH", true);
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   
+	   assertTrue(passed);
    }
 
    public void testQueryPartition(){
 	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
 	   
-	   assertEquals(uVal.isValid("http://www.go.com?q=query"), true);
-	   assertEquals(uVal.isValid("http://www.go.com?Q=QUERY"), true);
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
+	   System.out.println("--- Query partition ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com?q=query", true);
+	   passed &= logMismatched(uVal, "http://www.go.com?Q=QUERY", true);
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   
+	   assertTrue(passed);
    }
 
    public void testFlagsPartition(){
 	   // ALLOW_ALL_SCHEMES = true
 	   UrlValidator uVal = new UrlValidator(new String[] {"http"}, UrlValidator.ALLOW_ALL_SCHEMES);
 	   
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
-	   assertEquals(uVal.isValid("aaa://www.go.com"), true);
-	   assertEquals(uVal.isValid("://www.go.com"), false);
+	   System.out.println("--- Flags partition - Schemes ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   passed &= logMismatched(uVal, "aaa://www.go.com", true);
+	   passed &= logMismatched(uVal, "://www.go.com", false);
 	   
 	   // ALLOW_LOCAL_URLS = true
 	   uVal = new UrlValidator(new String[] {"http"}, UrlValidator.ALLOW_LOCAL_URLS);
 	   
-	   assertEquals(uVal.isValid("http://www.go.com"), true);
-	   assertEquals(uVal.isValid("http://localhost"), true);
+	   System.out.println("--- Flags partition - Local Urls ---");
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   passed &= logMismatched(uVal, "http://localhost", true);
+	   
+	   assertTrue(passed);
    }
    
    public void testIsValid()
