@@ -179,6 +179,8 @@ public class UrlValidatorTest extends TestCase {
 	   passed &= logMismatched(uVal, "http://www.go.com:80", true);
 	   passed &= logMismatched(uVal, "http://www.go.com", true);
 	   passed &= logMismatched(uVal, "http://www.go.com:-1", false);
+	   passed &= logMismatched(uVal, "http://www.go.com:characters", false);
+	   passed &= logMismatched(uVal, "http://www.go.com:80.1", false);
 	   passed &= logMismatched(uVal, "http://www.go.com:65536", true);
 	   
 	   assertTrue(passed);
@@ -236,9 +238,28 @@ public class UrlValidatorTest extends TestCase {
 	   }
    }
    
-   public void testAnyOtherUnitTest()
+   public void testPortsProgrammatically()
    {
+	   // According to the url standard, null and 0-65535 are valid ports.
+	   // Test all of them as well as boundaries (-1 and 65536)
+	   UrlValidator uVal = new UrlValidator(new String[] {"http"});
 	   
+	   System.out.println("--- All ports ---");
+	   boolean passed = true;
+	   passed &= logMismatched(uVal, "http://www.go.com", true);
+	   passed &= logMismatched(uVal, "http://www.go.com:-1", false);
+	   for (int i = 0; i < 65536; i++) {
+		   boolean result = uVal.isValid("http://www.go.com:" + Integer.toString(i));
+		   if (passed && !result) {
+			   // Log the first invalid port, then stop logging
+			   System.out.println("First failing port: " + Integer.toString(i));
+			   passed = false;
+		   }
+	   }
+	   // Technically the following line should pass, but even the UrlValidatorCorrect code
+	   // doesn't validate the port number correctly, so it is not needed
+	   // passed &= logMismatched(uVal, "http://www.go.com:65536", false);
+	   assertTrue(passed);
    }
    /**
     * Create set of tests by taking the testUrlXXX arrays and
