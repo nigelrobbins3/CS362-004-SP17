@@ -78,8 +78,8 @@ public class UrlValidatorTest extends TestCase {
 	   passed &= logMismatched(uVal, "http://0.0.00.0", true);
 	   passed &= logMismatched(uVal, "http://www.amazon.com:nan", false);
 	   passed &= logMismatched(uVal, "http://www.amazon.com:65535", true);
-	   passed &= logMismatched(uVal, "http://www.amazon.com:65536", true);
-	   passed &= logMismatched(uVal, "http://www.amazon.com:65537", true);
+	   passed &= logMismatched(uVal, "http://www.amazon.com:65536", false); // The "correct" code fails these tests because it is insufficient
+	   passed &= logMismatched(uVal, "http://www.amazon.com:65537", false); // The "correct" code fails these tests because it is insufficient
 	   passed &= logMismatched(uVal, "http://www.amazon.com:54.43", false);
 	   passed &= logMismatched(uVal, "http://www.amazon.com:-5", false);
 	   passed &= logMismatched(uVal, "http://www.amazon.com:0", true);
@@ -143,7 +143,7 @@ public class UrlValidatorTest extends TestCase {
 	   System.out.println("--- Scheme partition ---");
 	   boolean passed = true;
 	   passed &= logMismatched(uVal, "http://www.go.com", true);
-	   passed &= logMismatched(uVal, "www.go.com", true);
+	   passed &= logMismatched(uVal, "www.go.com", false);
 	   passed &= logMismatched(uVal, "HTTP://www.go.com", true);
 	   passed &= logMismatched(uVal, "htt://www.go.com", false);
 	   passed &= logMismatched(uVal, "aaa://www.go.com", false);
@@ -181,7 +181,7 @@ public class UrlValidatorTest extends TestCase {
 	   passed &= logMismatched(uVal, "http://www.go.com:-1", false);
 	   passed &= logMismatched(uVal, "http://www.go.com:characters", false);
 	   passed &= logMismatched(uVal, "http://www.go.com:80.1", false);
-	   passed &= logMismatched(uVal, "http://www.go.com:65536", true);
+	   passed &= logMismatched(uVal, "http://www.go.com:65536", false); // The "correct" code fails this test because it is insufficient
 	   
 	   assertTrue(passed);
    }
@@ -256,9 +256,8 @@ public class UrlValidatorTest extends TestCase {
 			   passed = false;
 		   }
 	   }
-	   // Technically the following line should pass, but even the UrlValidatorCorrect code
-	   // doesn't validate the port number correctly, so it is not needed
-	   // passed &= logMismatched(uVal, "http://www.go.com:65536", false);
+	   // The "correct" code fails this test because it is insufficient
+	   passed &= logMismatched(uVal, "http://www.go.com:65536", false);
 	   assertTrue(passed);
    }
    /**
